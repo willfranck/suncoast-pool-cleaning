@@ -2,26 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+:root {
+  --color-body: #000;
+  --color-body-text: #59e1e8;
+
+	--font-size-larger: clamp(1.2rem, 9vw, 1.6rem);
+	--font-size-large: clamp(1.1rem, 4vw, 1.4rem);
+  --font-size-small: clamp(0.8rem, 4vw, 0.9rem);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--color-body-text);
+  background: var(--color-body);
+  margin: 0;
+  overscroll-behavior-x: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: aquamarine;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-size: var(--font-size-larger);
+  font-weight: bold;
+}
+
+h2 {
+  font-size: var(--font-size-larger);
+  font-weight: bold;
+}
+
+h3 {
+  font-size: var(--font-size-large);
+  font-weight: bold;
+}
+
+p {
+  max-width: 80ch;
+}
+
+span {
+  font-size: var(--font-size-small);
 }

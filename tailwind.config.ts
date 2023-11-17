@@ -10,9 +10,15 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        hero: 'url(/spc_hero_splash.jpg)',
       },
+      backgroundColor: {
+        tintBlack: 'rgba(0, 0, 0, 0.5)',
+      },
+      height: {
+        hero: '70vh',
+      }
     },
   },
   plugins: [],
