@@ -16,8 +16,11 @@ const config: Config = {
       backgroundColor: {
         tintBlack: 'rgba(0, 0, 0, 0.5)',
       },
-      height: {
+      minHeight: {
         hero: '70vh',
+      },
+      scale: {
+        400: '400%',
       }
     },
   },
