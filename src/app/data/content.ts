@@ -7,7 +7,7 @@ import { faSplotch } from '@fortawesome/free-solid-svg-icons/faSplotch'
 //eslint-disable-next-line
 export default {
   services: {
-    mainTitle: 'We offer many services to best suit your needs',
+    mainTitle: 'We offer many services to best suit YOUR needs',
     
     serviceInfo: [
       {
@@ -31,7 +31,7 @@ export default {
         serviceIcon: faSprayCanSparkles,
       },
       {
-        serviceTitle: 'Algae Removal: From Green to Clean',
+        serviceTitle: 'Algae Removal: Green to Clean',
         serviceDesc: 'Algae can quickly get out of control if not treated and eliminated from the pool water. Our Green to Clean service is sure to get your pool back to being sparkling clean in 3 visits or less. This service guarantees the removal of all algae from the pool by utilizing the pump vaccum. Upon removal of algae all chemicals will be properly balanced',
         serviceIcon: faSplotch,
       },

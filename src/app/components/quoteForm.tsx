@@ -1,11 +1,20 @@
+'use client'
+import { useState } from 'react'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
 
 
 export default function QuoteForm() {
+  const [comments, setComments] = useState('')
+
+  function handleCommentChange(e: React.ChangeEvent<HTMLTextAreaElement>) {
+    const inputValue = e.target.value
+    setComments(inputValue.slice(0, 300))
+  }
+
   return (
-    <form className='flex flex-col items-center w-full max-w-[44rem] px-6 py-10'>
+    <form className='flex flex-col items-center w-full max-w-[45rem] px-6 py-10 bg-tintBlack shadow-form'>
       <div className='flex flex-col sm:flex-row justify-between items-center w-full'>
         <div className='max-w-[40rem]'>
           <Link
@@ -24,18 +33,18 @@ export default function QuoteForm() {
 
         <div className='flex flex-col w-full sm:w-auto sm:ml-6'>
           <label 
-            htmlFor='name'
+            htmlFor='subject'
             className='text-sm text-gray-400 leading-loose'
           >
-            Name
+            Subject
           </label>
-          <input
-            name='name'
-            type='text'
-            required
-            autoComplete='on'
+          <select
+            name='Subject'
             className='mb-1 px-2 py-1 text-gray-800 rounded-sm'
-          ></input>
+          >
+            <option>Get a Quote</option>
+            <option>General Question</option>
+          </select>
 
           <label 
             htmlFor='email'
@@ -48,6 +57,7 @@ export default function QuoteForm() {
             type='text'
             required
             autoComplete='on'
+            placeholder='Enter your email address'
             className='mb-2 px-2 py-1 text-gray-800 rounded-sm'
             ></input>
         </div>
@@ -63,10 +73,20 @@ export default function QuoteForm() {
         <textarea
           name='comments'
           required
-          autoComplete='on'
+          value={comments}
+          onChange={handleCommentChange}
           className='h-[10rem] px-2 py-1 text-gray-800 rounded-sm resize-none'
         ></textarea>
+        <span className='text-end'>Characters: {comments.length}/300</span>
       </div>
+
+      <button
+        type='submit'
+        aria-label='Submit quote form'
+        className='flex justify-around items-center w-40 mt-3 py-1 bg-blue-700 text-white font-semibold leading-6 rounded-sm shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500'
+      >
+        Send
+      </button>
     </form>
   )
 }

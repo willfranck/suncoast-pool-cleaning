@@ -22,11 +22,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='flex flex-col items-center w-5/6'>
+      <section className='w-full bg-teal-700'>
         <Services />
       </section>
 
-      <section className='flex flex-col items-center w-full'>
+      <section className='relative flex flex-col items-center w-full bg-form bg-center bg-cover isolate before:-z-10 before:absolute before:content-[""] before:inset-0 before:bg-tintBlack overflow-hidden'>
         <QuoteForm />
       </section>
 
