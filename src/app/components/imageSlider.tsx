@@ -1,87 +1,49 @@
 'use client'
 import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, EffectCoverflow } from 'swiper/modules'
+import { Pagination, EffectCoverflow, Autoplay } from 'swiper/modules'
 import 'swiper/css/bundle'
+import images from '@data/content'
 
 
 export default function ImageSlider() {
+  const sliderImages = images.slider.img
+
+
   return (
-    <article className='flex justify-center items-center max-w-[60rem] py-20'>
+    <article className='max-w-[60rem] py-20'>
       <Swiper
-        modules={[ Navigation, EffectCoverflow ]}
+        modules={[ Pagination, EffectCoverflow, Autoplay ]}
         effect='coverflow'
         coverflowEffect={{
           rotate: 10,
-          stretch: 10,
+          stretch: 100,
         }}
-        navigation
+        pagination={{
+          clickable: true,
+          dynamicBullets: true,
+        }}
+        initialSlide={1}
         slidesPerView={3}
+        spaceBetween={30}
         loop={true}
+        loopAdditionalSlides={1}
+        autoplay={{
+          delay: 4000,
+        }}
+        className='rounded-sm'
       >
-        <SwiperSlide>
-          <Image
-            src={'/spc_slider_img_1.jpg'}
-            alt='Pictures'
-            width={300}
-            height={0}
-            className='rounded-xl'
-          ></Image>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            src={'/spc_slider_img_2.jpg'}
-            alt='Pictures'
-            width={300}
-            height={0}
-            className='rounded-xl'
-          ></Image>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            src={'/spc_slider_img_3.jpg'}
-            alt='Pictures'
-            width={300}
-            height={0}
-            className='rounded-xl'
+        {sliderImages && sliderImages.map((image, index) => (
+          <SwiperSlide key={index}>
+            <Image
+              src={image}
+              alt='Pictures'
+              width={300}
+              height={0}
+              className='rounded-xl'
             ></Image>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            src={'/spc_slider_img_4.jpg'}
-            alt='Pictures'
-            width={300}
-            height={0}
-            className='rounded-xl'
-            ></Image>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            src={'/spc_slider_img_5.jpg'}
-            alt='Pictures'
-            width={300}
-            height={0}
-            className='rounded-xl'
-            ></Image>
-        </SwiperSlide>
-        {/* <SwiperSlide>
-          <Image
-            src={'/spc_slider_img_6.jpg'}
-            alt='Pictures'
-            width={300}
-            height={0}
-            className='rounded-xl'
-          ></Image>
-        </SwiperSlide> */}
-        <SwiperSlide>
-          <Image
-            src={'/spc_slider_img_7.jpg'}
-            alt='Pictures'
-            width={300}
-            height={0}
-            className='rounded-xl'
-            ></Image>
-        </SwiperSlide>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </article>
   )
