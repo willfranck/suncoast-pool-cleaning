@@ -19,14 +19,15 @@ const config: Config = {
         tintBlack: 'rgba(0, 0, 0, 0.5)',
       },
       boxShadow: {
-        form: '20px 0px 10px 0px rgba(0,0,0,0.5), -20px 0px 10px 0px rgba(0,0,0,0.5)'
+        form: '20px 0px 10px 0px rgba(0,0,0,0.5), -20px 0px 10px 0px rgba(0,0,0,0.5)',
+        map: '10px 10px 10px 5px rgba(0,0,0,0.5)',
       },
       minHeight: {
         hero: '70vh',
       },
       scale: {
         400: '400%',
-      }
+      },
     },
   },
   plugins: [],

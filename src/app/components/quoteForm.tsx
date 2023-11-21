@@ -14,7 +14,7 @@ export default function QuoteForm() {
   }
 
   return (
-    <form className='flex flex-col items-center w-full max-w-[45rem] px-6 py-10 bg-tintBlack shadow-form'>
+    <form className='flex flex-col items-center w-full max-w-[45rem] px-6 py-20 bg-tintBlack shadow-form'>
       <div className='flex flex-col sm:flex-row justify-between items-center w-full'>
         <div className='max-w-[40rem]'>
           <Link

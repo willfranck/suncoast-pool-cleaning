@@ -7,7 +7,7 @@ import { faSplotch } from '@fortawesome/free-solid-svg-icons/faSplotch'
 //eslint-disable-next-line
 export default {
   services: {
-    mainTitle: 'We offer many services to best suit YOUR needs',
+    heroTitle: 'We offer many services to best suit YOUR needs',
     
     serviceInfo: [
       {
@@ -31,7 +31,7 @@ export default {
         serviceIcon: faSprayCanSparkles,
       },
       {
-        serviceTitle: 'Algae Removal: Green to Clean',
+        serviceTitle: 'Algae Removal',
         serviceDesc: 'Algae can quickly get out of control if not treated and eliminated from the pool water. Our Green to Clean service is sure to get your pool back to being sparkling clean in 3 visits or less. This service guarantees the removal of all algae from the pool by utilizing the pump vaccum. Upon removal of algae all chemicals will be properly balanced',
         serviceIcon: faSplotch,
       },
@@ -41,17 +41,27 @@ export default {
   about: {
     paragraph1: "At Suncoast Pool Cleaning, we strive to provide professional and reliable pool cleaning services to the residents of St.Petersburg and surrounding areas.",
     paragraph2: "I'm Drew, owner and operator of Suncoast Pools LLC. I have been active in the central Florida pool industry since 2018 and after years of experience, I saw there was need for more personalized pool care. Which is how Suncoast Pool Cleaning was born! We use the best equipment on the market to ensure the highest quality results and source all of our chemicals locally and responsibly. I believe in treating my customers pools as if they were my own and I take great pride in my work! I understand how important it is to have reliable and trustworthy service that comes on the same day every week. We will keep your pool safely balanced and properly cleaned to ensure that its always ready for you and your family to enjoy!",
-    paragraph3: "We are seeking new residential customers in the St. Petersburg area, from the bay to the beach, including Tierra Verde and Bay Pines. Call or email to set up your free quote!",
+    paragraph3: "Call or email to set up your free quote!",
+  },
+
+  serviceArea: {
+    title: "Servicing all our neighbors",
+    paragraph1: "Residential customers in the St. Petersburg area",
+    paragraph2: "Tierra Verde to Largo",
+    paragraph3: "Seminole to the Bay",
   },
 
   slider: {
     img: [
-      '/spc_slider_img_6.jpg',
+      '/spc_slider_img_9.jpg',
       '/spc_slider_img_2.jpg',
       '/spc_slider_img_3.jpg',
       '/spc_about_splash.jpg',
       '/spc_slider_img_4.jpg',
       '/spc_slider_img_5.jpg',
+      '/spc_slider_img_6.jpg',
+      '/spc_slider_img_7.jpg',
+      '/spc_slider_img_8.jpg',
     ],
   },
 }

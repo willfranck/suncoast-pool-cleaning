@@ -26,6 +26,7 @@ export default function ImageSlider() {
         initialSlide={1}
         slidesPerView={3}
         spaceBetween={30}
+        lazyPreloadPrevNext={9}
         loop={true}
         loopAdditionalSlides={1}
         autoplay={{
@@ -41,7 +42,7 @@ export default function ImageSlider() {
               width={300}
               height={0}
               className='rounded-xl'
-            ></Image>
+            />
           </SwiperSlide>
         ))}
       </Swiper>

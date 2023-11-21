@@ -1,8 +1,9 @@
 import Image from 'next/image'
 import NavBar from '@components/navBar'
+import ServiceArea from '@components/serviceArea'
+import ImageSlider from '@components/imageSlider'
 import Footer from '@components/footer'
 import aboutContent from '@data/content'
-import ImageSlider from '@components/imageSlider'
 
 
 export default function AboutPage() {
@@ -11,10 +12,10 @@ export default function AboutPage() {
 
   return (
     <main>
-      <section className='relative flex flex-col items-center w-full min-h-hero bg-about bg-cover bg-center isolate before:-z-10 before:absolute before:content-[""] before:inset-0 before:bg-tintBlack'>
+      <section className='relative flex flex-col justify-center items-center w-full min-h-hero bg-about bg-cover bg-center isolate before:-z-10 before:absolute before:content-[""] before:inset-0 before:bg-tintBlack'>
         <NavBar />
 
-        <div className='flex flex-col sm:flex-row flex-1 items-center px-4 pb-20'>
+        <div className='flex flex-col lg:flex-row flex-1 items-center px-6 py-20'>
           <Image
             src={'/spc_logo.png'}
             alt='Suncoast Pool Cleaning logo and title'
@@ -24,13 +25,17 @@ export default function AboutPage() {
             className='m-10'
           />
           
-          <div className='mt-10 p-6 space-y-10 bg-tintBlack rounded-3xl'>
+          <div className='px-4 sm:px-10 py-10 space-y-10 bg-tintBlack rounded-3xl'>
             <h2>From the owner :</h2>
             <p>&ensp;{aboutInfo.paragraph1}</p>
             <p>&ensp;{aboutInfo.paragraph2}</p>
             <p>&ensp;{aboutInfo.paragraph3}</p>
           </div>
         </div>
+      </section>
+
+      <section className='py-20 px-6 bg-teal-800'>
+        <ServiceArea />
       </section>
 
       <section className='flex justify-center items-center'>
