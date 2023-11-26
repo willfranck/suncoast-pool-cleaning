@@ -2,12 +2,15 @@ import type { Metadata } from 'next'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { Inter } from 'next/font/google'
+import { Manrope } from 'next/font/google'
 import './globals.css'
 
 library.add(fas, fab)
 
-const inter = Inter({ subsets: ['latin'] })
+const manrope = Manrope({ 
+  subsets: ['latin'],
+  weight: ['400', '600'] 
+})
 
 
 export const metadata: Metadata = {
@@ -24,7 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         suppressHydrationWarning={true} 
-        className={inter.className}
+        className={manrope.className}
       >
         {children}
       </body>

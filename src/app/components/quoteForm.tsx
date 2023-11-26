@@ -31,7 +31,7 @@ export default function QuoteForm() {
           <h3 className='text-end'>Send us an email for a FREE quote or with questions</h3>
         </div>
 
-        <div className='flex flex-col w-full sm:w-auto sm:ml-6'>
+        <div className='flex flex-col w-full sm:max-w-[15rem] sm:ml-6'>
           <label 
             htmlFor='subject'
             className='text-sm text-gray-400 leading-loose'

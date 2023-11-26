@@ -3,21 +3,26 @@ import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, EffectCoverflow, Autoplay } from 'swiper/modules'
 import 'swiper/css/bundle'
-import images from '@data/content'
+import content from '@data/content'
 
 
 export default function ImageSlider() {
-  const sliderImages = images.slider.img
+  const sliderImages = content.slider.img
 
 
   return (
     <article className='max-w-[60rem] py-20'>
+      <h2 className='text-center pb-10'>
+        {content.slider.title}<br></br>
+        <span className='italic'>{content.slider.subtitle}</span>
+      </h2>
+
       <Swiper
         modules={[ Pagination, EffectCoverflow, Autoplay ]}
         effect='coverflow'
         coverflowEffect={{
           rotate: 10,
-          stretch: 100,
+          stretch: 30,
         }}
         pagination={{
           clickable: true,
@@ -28,7 +33,6 @@ export default function ImageSlider() {
         spaceBetween={30}
         lazyPreloadPrevNext={9}
         loop={true}
-        loopAdditionalSlides={1}
         autoplay={{
           delay: 4000,
         }}

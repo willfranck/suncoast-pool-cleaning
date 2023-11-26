@@ -2,14 +2,12 @@ import Image from 'next/image'
 import NavBar from '@components/navBar'
 import ServiceArea from '@components/serviceArea'
 import ImageSlider from '@components/imageSlider'
+import QuoteForm from '@components/quoteForm'
 import Footer from '@components/footer'
-import aboutContent from '@data/content'
+import content from '@data/content'
 
 
 export default function AboutPage() {
-  const aboutInfo = aboutContent.about
-
-
   return (
     <main>
       <section className='relative flex flex-col justify-center items-center w-full min-h-hero bg-about bg-cover bg-center isolate before:-z-10 before:absolute before:content-[""] before:inset-0 before:bg-tintBlack'>
@@ -26,20 +24,24 @@ export default function AboutPage() {
           />
           
           <div className='px-4 sm:px-10 py-10 space-y-10 bg-tintBlack rounded-3xl'>
-            <h2>From the owner :</h2>
-            <p>&ensp;{aboutInfo.paragraph1}</p>
-            <p>&ensp;{aboutInfo.paragraph2}</p>
-            <p>&ensp;{aboutInfo.paragraph3}</p>
+            <h2>{content.about.title}</h2>
+            <p>&ensp;{content.about.paragraph1}</p>
+            <p>&ensp;{content.about.paragraph2}</p>
+            <p>&ensp;{content.about.paragraph3}</p>
           </div>
         </div>
       </section>
 
-      <section className='py-20 px-6 bg-teal-800'>
+      <section className='bg-teal-800'>
         <ServiceArea />
       </section>
 
       <section className='flex justify-center items-center'>
         <ImageSlider />
+      </section>
+
+      <section className='relative flex flex-col items-center w-full bg-form bg-center bg-cover isolate before:-z-10 before:absolute before:content-[""] before:inset-0 before:bg-tintBlack overflow-hidden'>
+        <QuoteForm />
       </section>
 
       <Footer />
