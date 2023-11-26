@@ -32,7 +32,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className='bg-teal-800'>
+      <section className='bg-[#016A70]'>
         <ServiceArea />
       </section>
 

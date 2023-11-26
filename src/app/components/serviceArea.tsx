@@ -27,7 +27,7 @@ export default function ServiceArea() {
         alt="Map of our service area"
         width={456}
         height={0}
-        className='rounded-full shadow-map'
+        className='rounded-full shadow-mapImg'
       />
     </article>
   )
