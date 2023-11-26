@@ -1,9 +1,6 @@
 //eslint-disable-next-line
 export default {
   services: {
-    heroSpan: 'from the Bay to the Beach',
-    heroTitle: 'We offer many services to best suit YOUR needs',
-    
     serviceInfo: [
       {
         title: 'Chemical Only',

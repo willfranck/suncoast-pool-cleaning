@@ -12,11 +12,15 @@ export default function ImageSlider() {
 
   return (
     <article className='max-w-[60rem] py-20'>
-      <h2 className='text-center pb-10'>
-        {content.slider.title}<br></br>
-        <span className='italic'>{content.slider.subtitle}</span>
-      </h2>
-
+      <div className='flex flex-col items-center text-center pb-6'>
+        <h2 className='max-w-[100vw] pb-4'>
+          {content.slider.title}<br></br>
+        </h2>
+        <span className='italic'>
+          {content.slider.subtitle}
+        </span>
+      </div>
+      
       <Swiper
         modules={[ Pagination, EffectCoverflow, Autoplay ]}
         effect='coverflow'

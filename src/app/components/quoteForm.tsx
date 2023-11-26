@@ -26,7 +26,7 @@ export default function QuoteForm() {
             &ensp;727.266.5144
           </Link>
     
-          <hr className='w-full my-4 text-center text-gray-400 border-t-1 border-gray-400 overflow-visible before:relative before:content-["or"] before:bottom-3.5 before:px-1 before:bg-black'></hr>
+          <hr className='w-full my-4 text-center text-gray-400 border-t-1 border-gray-400 overflow-visible before:relative before:content-["or"] before:bottom-3.5 before:text-white'></hr>
 
           <h3 className='text-end'>Send us an email for a FREE quote or with questions</h3>
         </div>

@@ -13,15 +13,8 @@ export default function Services() {
 
 
   return (
-    <article className='flex flex-col items-center w-full'>
-      <div className='flex flex-col sm:flex-row justify-center w-full px-4 pt-4 lg:pt-10'>
-        <span className={windsong.className + ' px-6 pt-4 text-lg text-end'}>
-          {content.services.heroSpan}
-        </span>
-        <h2 className='text-center'>{content.services.heroTitle}</h2>
-      </div>
-      
-      <ul className='flex flex-col w-full lg:max-w-[75%] px-10 pt-10 pb-20'>
+    <article className='flex flex-col items-center lg:w-full max-w-[75rem] px-4 py-20'>
+      <ul className='flex flex-col w-full px-2 space-y-10'>
         {services && services.map((service, index) => (
           <li key={index} className={service.flexDirection + ' lg:flex justify-between items-center py-10'}>
             <Image 

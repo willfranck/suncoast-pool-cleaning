@@ -23,7 +23,7 @@ const config: Config = {
         map: '10px 10px 10px 5px rgba(0,0,0,0.5)',
       },
       minHeight: {
-        hero: '70vh',
+        hero: '75vh',
       },
       scale: {
         400: '400%',

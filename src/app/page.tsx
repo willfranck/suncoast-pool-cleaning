@@ -22,7 +22,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='w-full bg-teal-800'>
+      <section className='w-full flex flex-col items-center bg-teal-800'>
         <Services />
       </section>
 
