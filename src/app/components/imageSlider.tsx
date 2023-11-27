@@ -22,11 +22,11 @@ export default function ImageSlider() {
         effect='coverflow'
         coverflowEffect={{
           rotate: 15,
-          stretch: 100,
+          stretch: 50,
         }}
         navigation
         initialSlide={1}
-        slidesPerView={1}
+        slidesPerView={3}
         spaceBetween={0}
         breakpoints={{
           768: {
