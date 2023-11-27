@@ -26,7 +26,7 @@ export default function ImageSlider() {
         }}
         navigation
         initialSlide={1}
-        slidesPerView={3}
+        slidesPerView={1}
         spaceBetween={0}
         breakpoints={{
           768: {
