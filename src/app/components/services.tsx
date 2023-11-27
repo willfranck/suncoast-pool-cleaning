@@ -23,10 +23,10 @@ export default function Services() {
                 alt='Image'
                 width={456}
                 height={0}
-                className='mx-auto mb-6 lg:mb-0 lg:mx-10 rounded-tr-[40%] rounded-bl-[40%] shadow-serviceImg'
+                className='mx-auto lg:mx-10 mb-6 lg:mb-0 rounded-tr-[40%] rounded-bl-[40%] shadow-serviceImg'
               />
 
-              <div className='flex-1 max-w-[500px] lg:mx-10'>
+              <div className='flex-1 max-w-[31rem] lg:mx-10'>
                 <h3 className='px-2 pb-4 text-end lg:text-center'>{service.title}</h3>
                 <span>{service.desc}</span>
               </div>

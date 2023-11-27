@@ -7,7 +7,7 @@ import Link from 'next/link'
 export default function Footer() {
   return (
     <footer className='flex flex-col justify-center items-center w-full py-10'>
-      <div className='flex justify-between items-center w-full max-w-[400px] px-5 pb-10'>
+      <div className='flex justify-between items-center w-full max-w-[25rem] px-5 pb-10'>
         <Image
           src={'/spc_logo.png'}
           alt='Suncoast Pool Cleaning logo'
