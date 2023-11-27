@@ -22,20 +22,18 @@ export default function ImageSlider() {
         effect='coverflow'
         coverflowEffect={{
           rotate: 15,
-          stretch: 50,
         }}
         navigation
         grabCursor={true}
         initialSlide={1}
         slidesPerView={3}
-        spaceBetween={-50}
+        spaceBetween={10}
         breakpoints={{
           768: {
             spaceBetween: 30,
           },
         }}
         loop={true}
-        lazyPreloadPrevNext={5}
         autoplay={{
           delay: 4000,
         }}
