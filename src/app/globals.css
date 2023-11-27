@@ -17,6 +17,13 @@
   --font-size-small: clamp(0.8rem, 4vw, 0.9rem);
 }
 
+@layer components {
+  .swiper-wrapper > *:not(.swiper-slide-fully-visible) {
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+  }
+}
+
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
