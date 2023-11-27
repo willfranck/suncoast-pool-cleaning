@@ -22,7 +22,8 @@ export default function ImageSlider() {
         effect='coverflow'
         coverflowEffect={{
           rotate: 15,
-          depth: 300,
+          depth: 50,
+          scale: 0.9,
         }}
         navigation
         grabCursor={true}
