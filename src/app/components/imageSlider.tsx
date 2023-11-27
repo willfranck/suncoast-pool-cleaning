@@ -13,15 +13,15 @@ export default function ImageSlider() {
   return (
     <article className='max-w-[60rem] py-20 overflow-hidden'>
       <div className='flex flex-col items-center md:items-start px-6'>
-        <p className='w-11/12 md:w-1/2 pb-1'>{content.slider.subtitle}</p>
-        <hr className='w-11/12 md:w-1/2 pb-6 border-t-1 border-gray-500'></hr>
+        <p className='w-full md:w-1/2 pb-1'>{content.slider.subtitle}</p>
+        <hr className='w-full md:w-1/2 pb-6 border-t-1 border-gray-500'></hr>
       </div>
 
       <Swiper
         modules={[ Pagination, EffectCoverflow, Autoplay ]}
         effect='coverflow'
         coverflowEffect={{
-          rotate: 10,
+          rotate: 15,
           stretch: 30,
         }}
         pagination={{
@@ -30,7 +30,13 @@ export default function ImageSlider() {
         }}
         initialSlide={1}
         slidesPerView={3}
-        spaceBetween={30}
+        spaceBetween={-100}
+        breakpoints={{
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        }}
         lazyPreloadPrevNext={9}
         loop={true}
         autoplay={{
