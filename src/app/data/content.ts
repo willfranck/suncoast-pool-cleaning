@@ -16,7 +16,7 @@ export default {
       },
       {
         title: 'Full Service',
-        desc: 'This weekly service option provides your pool with the ultimate cleanliness and chemical balance. This includes chemical adjustment, wall brush, surface skim, skimmer and pump baskets emptied out, weekly vaccum of pool bottom, pool filter cleaned monthly and replaced when necessary (filter cartridge is separate fee)',
+        desc: 'This weekly service option provides your pool with the ultimate cleanliness and chemical balance. This includes chemical adjustment, wall brush, surface skim, skimmer and pump baskets emptied out, weekly vaccum of pool bottom, pool filter cleaned monthly and replaced when necessary (filter cartridge additional)',
         img: '/spc_service_img_3.png',
         flexDirection: 'flex-row',
       },
