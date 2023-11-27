@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, EffectCoverflow, Autoplay } from 'swiper/modules'
+import { Navigation, EffectCoverflow, Autoplay } from 'swiper/modules'
 import 'swiper/css/bundle'
 import content from '@data/content'
 
@@ -18,26 +18,22 @@ export default function ImageSlider() {
       </div>
 
       <Swiper
-        modules={[ Pagination, EffectCoverflow, Autoplay ]}
+        modules={[ Navigation, EffectCoverflow, Autoplay ]}
         effect='coverflow'
         coverflowEffect={{
           rotate: 15,
-          stretch: 30,
+          stretch: 100,
         }}
-        pagination={{
-          clickable: true,
-          dynamicBullets: true,
-        }}
+        navigation
         initialSlide={1}
         slidesPerView={3}
-        spaceBetween={-100}
+        spaceBetween={0}
         breakpoints={{
           768: {
             slidesPerView: 3,
             spaceBetween: 30,
           },
         }}
-        lazyPreloadPrevNext={9}
         loop={true}
         autoplay={{
           delay: 4000,
