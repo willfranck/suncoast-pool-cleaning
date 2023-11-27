@@ -34,9 +34,16 @@ export default function ImageSlider() {
           768: {
             spaceBetween: 30,
             coverflowEffect: {
+              depth: 10,
+            },
+          },
+          1200: {
+            slidesPerView: 5,
+            coverflowEffect: {
+              rotate: 15,
               depth: 100,
               scale: 1,
-            }
+            },
           },
         }}
         loop={true}
