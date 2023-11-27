@@ -29,9 +29,10 @@ export default function ImageSlider() {
         grabCursor={true}
         initialSlide={1}
         slidesPerView={3}
-        spaceBetween={30}
+        spaceBetween={0}
         breakpoints={{
           768: {
+            spaceBetween: 30,
             coverflowEffect: {
               depth: 100,
               scale: 1,
