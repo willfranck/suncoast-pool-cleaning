@@ -11,10 +11,10 @@ export default function ImageSlider() {
 
 
   return (
-    <article className='max-w-[60rem] py-20'>
-      <div className='flex flex-col items-center lg:items-start w-full'>
-        <p className='w-1/3 lg:w-1/2 pb-1'>{content.slider.subtitle}</p>
-        <hr className='w-1/3 lg:w-1/2 pb-6 border-t-1 border-gray-500'></hr>
+    <article className='max-w-[60rem] py-20 overflow-hidden'>
+      <div className='flex flex-col items-center md:items-start px-6'>
+        <p className='w-11/12 md:w-1/2 pb-1'>{content.slider.subtitle}</p>
+        <hr className='w-11/12 md:w-1/2 pb-6 border-t-1 border-gray-500'></hr>
       </div>
 
       <Swiper
