@@ -21,22 +21,25 @@ export default function ImageSlider() {
         modules={[ EffectCoverflow, Autoplay ]}
         effect='coverflow'
         coverflowEffect={{
-          rotate: 15,
-          depth: 50,
+          rotate: 30,
+          depth: 0,
           scale: 0.9,
         }}
         navigation
         grabCursor={true}
         initialSlide={1}
         slidesPerView={3}
-        spaceBetween={10}
+        spaceBetween={30}
         breakpoints={{
           768: {
-            spaceBetween: 30,
+            coverflowEffect: {
+              depth: 100,
+              scale: 1,
+            }
           },
         }}
         loop={true}
-        loopAdditionalSlides={1}
+        loopAdditionalSlides={3}
         autoplay={{
           delay: 4000,
         }}
