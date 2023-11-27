@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { EffectCoverflow, Autoplay } from 'swiper/modules'
+import { Navigation, EffectCoverflow, Autoplay } from 'swiper/modules'
 import 'swiper/css/bundle'
 import content from '@data/content'
 
@@ -18,7 +18,7 @@ export default function ImageSlider() {
       </div>
 
       <Swiper
-        modules={[ EffectCoverflow, Autoplay ]}
+        modules={[ Navigation, EffectCoverflow, Autoplay ]}
         effect='coverflow'
         coverflowEffect={{
           rotate: 30,
