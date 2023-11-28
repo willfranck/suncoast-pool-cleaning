@@ -26,9 +26,9 @@ export default function AboutPage() {
           
           <div className='px-4 sm:px-10 py-10 space-y-10 bg-tintBlack rounded-3xl'>
             <h2>{content.about.title}</h2>
-            <p>&ensp;{content.about.paragraph1}</p>
-            <p>&ensp;{content.about.paragraph2}</p>
-            <p>&ensp;{content.about.paragraph3}</p>
+            <p>&emsp;{content.about.paragraph1}</p>
+            <p>&emsp;{content.about.paragraph2}</p>
+            <p className='text-end'>{content.about.paragraph3}</p>
           </div>
         </div>
       </section>

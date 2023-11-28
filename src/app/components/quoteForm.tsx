@@ -10,7 +10,7 @@ export default function QuoteForm() {
 
   function handleCommentChange(e: React.ChangeEvent<HTMLTextAreaElement>) {
     const inputValue = e.target.value
-    setComments(inputValue.slice(0, 300))
+    setComments(inputValue.slice(0, 500))
   }
 
   return (
@@ -77,7 +77,7 @@ export default function QuoteForm() {
           onChange={handleCommentChange}
           className='h-[10rem] px-2 py-1 text-gray-800 rounded-sm resize-none'
         ></textarea>
-        <span className='text-end'>Characters: {comments.length}/300</span>
+        <span className='text-end'>Characters: {comments.length}/500</span>
       </div>
 
       <button
