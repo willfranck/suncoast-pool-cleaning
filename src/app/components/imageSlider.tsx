@@ -21,7 +21,7 @@ export default function ImageSlider() {
         <hr className='w-full md:w-1/2 border-t-1 border-gray-500'></hr>
       </div>
 
-      <div className='mb-6 py-4'>
+      <div className='mb-6 py-4 pl-4'>
         <Swiper
           modules={[ EffectCoverflow, Autoplay ]}
           effect='coverflow'
@@ -32,8 +32,8 @@ export default function ImageSlider() {
           }}
           grabCursor={true}
           initialSlide={1}
-          slidesPerView={3}
-          spaceBetween={0}
+          slidesPerView={1}
+          spaceBetween={-100}
           loop={true}
           loopAdditionalSlides={5}
           autoplay={{
@@ -41,12 +41,15 @@ export default function ImageSlider() {
           }}
           breakpoints={{
             768: {
+              slidesPerView: 3,
               spaceBetween: 30,
               coverflowEffect: {
                 depth: 10,
               },
             },
             1200: {
+              slidesPerView: 3,
+              spaceBetween: 30,
               coverflowEffect: {
                 rotate: 15,
                 depth: 100,
