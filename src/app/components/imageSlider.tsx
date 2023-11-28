@@ -21,7 +21,7 @@ export default function ImageSlider() {
         <hr className='w-full md:w-1/2 border-t-1 border-gray-500'></hr>
       </div>
 
-      <div className='mb-6 py-4 pl-4'>
+      <div className='mb-6 py-4 pl-4 md:pl-0'>
         <Swiper
           modules={[ EffectCoverflow, Autoplay ]}
           effect='coverflow'
