@@ -44,7 +44,6 @@ export default {
 
   serviceArea: {
     title: "Servicing All Our Neighbors",
-    subtitle: "Residential customers in the St. Petersburg area",
     paragraph1: "Tierra Verde to Largo",
     paragraph2: "Seminole to the Bay",
   },

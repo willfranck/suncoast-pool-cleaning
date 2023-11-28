@@ -18,8 +18,12 @@ export default function Testimonials() {
           key={index}
           className='flex flex-col justify-between max-w-[30rem] px-10 py-4 text-black bg-[#59e1e8] rounded-md shadow-testimonial'
         >
-          <p className='mb-4'>{testimonial.comments}</p>
-          <span className={windsong.className + ' text-lg self-end'}>-&ensp;{testimonial.name}</span>
+          <p className='mb-4'>
+            {testimonial.comments}
+          </p>
+          <span className={windsong.className + ' text-lg self-end'}>
+            -&ensp;{testimonial.name}
+          </span>
         </div>
       ))}
     </article>

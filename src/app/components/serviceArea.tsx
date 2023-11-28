@@ -12,13 +12,15 @@ export default function ServiceArea() {
   return (
     <article className='flex flex-col lg:flex-row justify-center items-center px-6 py-10'>
       <div className='flex flex-col pb-10 lg:py-20 lg:px-10 lg:space-y-10'>
-        <div className='flex flex-col justify-center'>
-          <h2>{content.serviceArea.title}</h2>
-          <span>{content.serviceArea.subtitle}</span>
-        </div>
+        <h2>{content.serviceArea.title}</h2>
+
         <div className='flex flex-col justify-center items-center lg:h-32 mt-10 space-y-4'>
-          <p className={windsong.className + ' text-3xl lg:text-4xl -skew-y-6'}>{content.serviceArea.paragraph1}</p>
-          <p className={windsong.className + ' text-3xl lg:text-4xl -skew-y-6'}>{content.serviceArea.paragraph2}</p>
+          <p className={windsong.className + ' text-3xl lg:text-4xl -skew-y-6'}>
+            {content.serviceArea.paragraph1}
+          </p>
+          <p className={windsong.className + ' text-3xl lg:text-4xl -skew-y-6'}>
+            {content.serviceArea.paragraph2}
+          </p>
         </div>
       </div>
 

@@ -17,7 +17,10 @@ export default function Services() {
       <ul className='flex flex-col w-full px-2 space-y-10'>
         {services && services.map((service, index) => (
           <>
-            <li key={index} className={service.flexDirection + ' lg:flex justify-between items-center py-10'}>
+            <li 
+              key={index} 
+              className={service.flexDirection + ' lg:flex justify-between items-center py-10'}
+            >
               <Image 
                 src={service.img}
                 alt='Image'
@@ -27,7 +30,9 @@ export default function Services() {
               />
 
               <div className='flex-1 max-w-[31rem] lg:mx-10'>
-                <h3 className='px-2 pb-4 text-end lg:text-center'>{service.title}</h3>
+                <h3 className='px-2 pb-4 text-end lg:text-center'>
+                  {service.title}
+                </h3>
                 <span>{service.desc}</span>
               </div>
             </li>

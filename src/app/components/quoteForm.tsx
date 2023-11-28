@@ -54,7 +54,7 @@ export default function QuoteForm() {
           </label>
           <input
             name='email'
-            type='text'
+            type='email'
             required
             autoComplete='on'
             placeholder='Enter your email address'
