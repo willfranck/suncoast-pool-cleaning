@@ -2,6 +2,7 @@ import Image from 'next/image'
 import NavBar from '@components/navBar'
 import ServiceArea from '@components/serviceArea'
 import ImageSlider from '@components/imageSlider'
+import Testimonials from '@components/testimonials'
 import QuoteForm from '@components/quoteForm'
 import Footer from '@components/footer'
 import content from '@data/content'
@@ -38,6 +39,10 @@ export default function AboutPage() {
 
       <section className='flex justify-center items-center'>
         <ImageSlider />
+      </section>
+
+      <section className='flex justify-center items-center bg-[#016A70]'>
+        <Testimonials />
       </section>
 
       <section className='relative flex flex-col items-center w-full bg-form bg-center bg-cover isolate before:-z-10 before:absolute before:content-[""] before:inset-0 before:bg-tintBlack overflow-hidden'>
