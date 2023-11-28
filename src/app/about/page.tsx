@@ -37,7 +37,7 @@ export default function AboutPage() {
         <ServiceArea />
       </section>
 
-      <section className='flex justify-center items-center'>
+      <section className='flex justify-center items-center bg-[#081E2F]'>
         <ImageSlider />
       </section>
 
