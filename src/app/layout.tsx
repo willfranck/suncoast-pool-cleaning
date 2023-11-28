@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/react'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -9,7 +10,7 @@ library.add(fas, fab)
 
 const manrope = Manrope({ 
   subsets: ['latin'],
-  weight: ['400', '600'] 
+  weight: ['400', '600'],
 })
 
 
@@ -30,6 +31,7 @@ export default function RootLayout({
         className={manrope.className}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   )
