@@ -1,8 +1,8 @@
+import Link from 'next/link'
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { faCircleInfo } from '@fortawesome/free-solid-svg-icons'
-import Link from 'next/link'
 
 
 export default function Footer() {

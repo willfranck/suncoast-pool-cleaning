@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Image from 'next/image'
 import NavBar from '@components/navBar'
 import Services from '@components/services'
@@ -12,13 +13,17 @@ export default function Home() {
         <NavBar />
 
         <div className='flex flex-1 items-center px-4 pb-20'>
-          <Image 
-            src={'/spc_logo_full.png'}
-            alt='Suncoast Pool Cleaning logo and title'
-            loading='eager'
-            width={854}
-            height={0}
-          />
+          <Link 
+            href={'tel:+17272665144'}
+          >
+            <Image 
+              src={'/spc_logo_full.png'}
+              alt='Suncoast Pool Cleaning logo and title'
+              loading='eager'
+              width={854}
+              height={0}
+            />
+          </Link>
         </div>
       </section>
 
