@@ -24,7 +24,7 @@ export default function AboutPage() {
             className='m-10'
           />
           
-          <div className='px-4 sm:px-10 py-10 space-y-10 bg-tintBlack rounded-3xl'>
+          <div className='px-4 sm:px-10 py-10 space-y-10 bg-tintBlack rounded-md'>
             <h2>{content.about.title}</h2>
             <p>&emsp;{content.about.paragraph1}</p>
             <p>&emsp;{content.about.paragraph2}</p>

@@ -16,7 +16,7 @@ export default function Testimonials() {
       {testimonials && testimonials.map((testimonial, index) => (
         <div 
           key={index}
-          className='flex flex-col justify-between max-w-[30rem] px-10 py-4 text-black bg-[#59e1e8] rounded-md shadow-testimonial'
+          className='flex flex-col justify-between max-w-[30rem] min-h-[13rem] px-10 py-4 text-black bg-[#59e1e8] rounded-sm shadow-testimonial'
         >
           <p className='mb-4'>
             {testimonial.comments}
