@@ -11,26 +11,30 @@ import content from '@data/content'
 export default function AboutPage() {
   return (
     <main>
-      <section className='relative flex flex-col justify-center items-center w-full min-h-hero bg-about bg-cover bg-center isolate before:-z-10 before:absolute before:content-[""] before:inset-0 before:bg-tintBlack'>
+      <section className='relative flex flex-col items-center w-full min-h-hero bg-about bg-cover bg-center isolate before:-z-10 before:absolute before:content-[""] before:inset-0 before:bg-tintBlack'>
         <NavBar />
 
-        <div className='flex flex-col lg:flex-row flex-1 items-center px-6 py-20'>
-          <Image
-            src={'/spc_logo.png'}
-            alt='Suncoast Pool Cleaning logo and title'
-            loading='eager'
-            width={160}
-            height={0}
-            className='m-10'
-          />
-          
-          <div className='px-4 sm:px-10 py-10 space-y-10 bg-tintBlack rounded-md'>
-            <h2>{content.about.title}</h2>
-            <p>&emsp;{content.about.paragraph1}</p>
-            <p>&emsp;{content.about.paragraph2}</p>
-            <p className='text-end'>{content.about.paragraph3}</p>
+        <article className='flex justify-center items-center flex-1 w-full'>
+          <div className='flex flex-col lg:flex-row justify-around items-center w-full'>
+            <Image
+              src={'/spc_logo.png'}
+              alt='Suncoast Pool Cleaning logo and title'
+              loading='eager'
+              width={256}
+              height={0}
+              className='m-20'
+            />
+            
+            <div className='flex justify-center w-full max-w-[60rem] bg-tintBlack'>
+              <div className='px-4 sm:px-10 py-10 space-y-10'>
+                <h2>{content.about.title}</h2>
+                <p>&emsp;{content.about.paragraph1}</p>
+                <p>&emsp;{content.about.paragraph2}</p>
+                <p className='text-end'>{content.about.paragraph3}</p>
+              </div>
+            </div>
           </div>
-        </div>
+        </article>
       </section>
 
       <section className='bg-[#016A70]'>
@@ -45,7 +49,7 @@ export default function AboutPage() {
         <Testimonials />
       </section>
 
-      <section className='relative flex flex-col items-center w-full bg-form bg-center bg-cover isolate before:-z-10 before:absolute before:content-[""] before:inset-0 before:bg-tintBlack overflow-hidden'>
+      <section className='relative flex flex-col items-center bg-form bg-center bg-cover isolate before:-z-10 before:absolute before:content-[""] before:inset-0 before:bg-tintBlack overflow-hidden'>
         <QuoteForm />
       </section>
 

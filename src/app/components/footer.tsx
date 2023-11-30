@@ -36,7 +36,9 @@ export default function Footer() {
       </div>
 
       <p className='text-xs'>Designed and built by 
-        <span className='text-xs text-blue-400'>&ensp;willfranckcodes</span>
+        <span className='text-xs text-blue-400'>
+          &ensp;willfranckcodes
+        </span>
       </p>
     </footer>
   )

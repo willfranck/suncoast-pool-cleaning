@@ -12,8 +12,8 @@
   --color-body: #000;
   --color-body-text: #59e1e8;
 
-	--font-size-larger: clamp(1.3rem, 9vw, 2.0rem);
-	--font-size-large: clamp(1.2rem, 4vw, 1.8rem);
+	--font-size-larger: clamp(1.4rem, 9vw, 2.0rem);
+	--font-size-large: clamp(1.4rem, 5vw, 1.8rem);
   --font-size-small: clamp(0.8rem, 4vw, 0.9rem);
 }
 

@@ -17,6 +17,7 @@ export default function NavBar() {
           &ensp;Call Us
         </Link>
       </div>
+      
       <div className='flex justify-between w-24'>
         <Link 
           href={'/'}

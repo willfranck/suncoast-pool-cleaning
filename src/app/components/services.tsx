@@ -1,11 +1,5 @@
 import Image from 'next/image'
-import { WindSong } from 'next/font/google'
 import content from '@data/content'
-
-const windsong = WindSong({
-  subsets: ['latin'], 
-  weight: '500' 
-})
 
 
 export default function Services() {

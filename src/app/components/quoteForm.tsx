@@ -14,7 +14,7 @@ export default function QuoteForm() {
   }
 
   return (
-    <form className='flex flex-col items-center w-full max-w-[45rem] px-6 py-20 bg-tintBlack shadow-quoteForm'>
+    <form className='flex flex-col items-center w-full max-w-[45rem] px-6 py-20 bg-tintBlack shadow-xBlack'>
       <div className='flex flex-col sm:flex-row justify-between items-center w-full'>
         <div className='max-w-[40rem]'>
           <Link
@@ -28,7 +28,9 @@ export default function QuoteForm() {
     
           <hr className='w-full my-4 text-center text-gray-400 border-t-1 border-gray-400 overflow-visible before:relative before:content-["or"] before:bottom-3.5 before:text-white'></hr>
 
-          <h3 className='text-end'>Send us an email for a FREE quote or with questions</h3>
+          <h3 className='text-end'>
+            Send us an email for a FREE quote or with questions
+          </h3>
         </div>
 
         <div className='flex flex-col w-full sm:max-w-[15rem] sm:ml-6'>
@@ -77,7 +79,10 @@ export default function QuoteForm() {
           onChange={handleCommentChange}
           className='h-[10rem] px-2 py-1 text-gray-800 rounded-sm resize-none'
         ></textarea>
-        <span className='text-end'>Characters: {comments.length}/500</span>
+        
+        <span className='text-end'>
+          Characters: {comments.length}/500
+        </span>
       </div>
 
       <button

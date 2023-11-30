@@ -1,5 +1,5 @@
-import content from '@data/content'
 import { WindSong } from 'next/font/google'
+import content from '@data/content'
 
 const windsong = WindSong({
   subsets: ['latin'], 

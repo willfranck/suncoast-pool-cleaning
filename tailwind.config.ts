@@ -22,13 +22,16 @@ const config: Config = {
         serviceImg: '-5px 10px 10px 3px rgba(0,0,0,0.5)',
         mapImg: '10px 10px 10px 3px rgba(0,0,0,0.5)',
         testimonial: '6px 6px 10px 2px rgba(0,0,0,0.5)',
-        quoteForm: '20px 0px 10px 0px rgba(0,0,0,0.5), -20px 0px 10px 0px rgba(0,0,0,0.5)',
+        xBlack: '20px 0px 10px 0px rgba(0,0,0,0.5), -20px 0px 10px 0px rgba(0,0,0,0.5)',
       },
       minHeight: {
         hero: '75vh',
       },
       scale: {
         400: '400%',
+      },
+      screens: {
+        lg: '1120px',
       },
     },
   },
