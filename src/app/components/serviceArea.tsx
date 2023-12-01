@@ -10,8 +10,8 @@ const windsong = WindSong({
 
 export default function ServiceArea() {
   return (
-    <article className='flex flex-col lg:flex-row justify-center items-center'>
-      <div className='flex flex-col flex-1 lg:flex-none items-center px-20 py-10 lg:space-y-10'>
+    <article className='flex flex-col lg:flex-row-reverse justify-center items-center'>
+      <div className='flex flex-col flex-1 lg:flex-none items-center lg:px-20 py-10 lg:space-y-10'>
         <h3 className='md:max-w-[14rem] text-center'>
           {content.serviceArea.title}
         </h3>
@@ -26,11 +26,11 @@ export default function ServiceArea() {
         </div>
       </div>
 
-      <div>
+      <div className='w-full'>
         <Image 
           src={'/spc_service_area.png'}
           alt="Map of our service area"
-          width={912}
+          width={1024}
           height={0}
           className='w-full lg:shadow-xBlack'
         />

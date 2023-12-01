@@ -31,7 +31,7 @@ const config: Config = {
         400: '400%',
       },
       screens: {
-        lg: '1120px',
+        lg: '1024px',
       },
     },
   },
