@@ -25,7 +25,7 @@ export default function AboutPage() {
               className='m-20'
             />
             
-            <div className='flex justify-center w-full max-w-[60rem] bg-tintBlack'>
+            <div className='flex justify-center w-full lg:max-w-[60rem] bg-tintBlack'>
               <div className='px-4 sm:px-10 py-10 space-y-10'>
                 <h2>{content.about.title}</h2>
                 <p>&emsp;{content.about.paragraph1}</p>
