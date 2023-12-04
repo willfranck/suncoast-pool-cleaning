@@ -23,7 +23,6 @@
     display: block;
     position: fixed;
     inset: 0;
-    height: 100%;
     z-index: -10;
     background: url(/spc_truck_banner.png) no-repeat center center;
     -webkit-background-size: cover;
