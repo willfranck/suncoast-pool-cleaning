@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import NavBar from '@components/navBar'
+import Banner from '@components/banner'
 import Services from '@components/services'
 import QuoteForm from '@components/quoteForm'
 import Footer from '@components/footer'
@@ -8,7 +9,7 @@ import Footer from '@components/footer'
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center min-h-screen">
+    <main className='flex flex-col items-center min-h-screen bg-banner bg-fixed bg-center bg-cover bg-no-repeat '>
       <section className='relative flex flex-col items-center w-full min-h-hero bg-hero bg-cover bg-center isolate before:-z-10 before:absolute before:content-[""] before:inset-0 before:bg-tintBlack'>
         <NavBar />
 
@@ -29,6 +30,10 @@ export default function Home() {
 
       <section className='w-full flex flex-col items-center bg-[#016A70]'>
         <Services />
+      </section>
+      
+      <section className='w-full'>
+        <Banner />
       </section>
 
       <section className='relative flex flex-col items-center w-full bg-form bg-center bg-cover isolate before:-z-10 before:absolute before:content-[""] before:inset-0 before:bg-tintBlack overflow-hidden'>
