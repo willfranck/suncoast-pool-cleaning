@@ -14,7 +14,7 @@ const config: Config = {
         hero: 'url(/spc_home_splash.jpg)',
         form: 'url(/spc_home_form.jpg)',
         about: 'url(/spc_about_splash.jpg)',
-        banner: 'url(/spc_truck_banner.jpg)',
+        banner: 'url(/spc_truck_banner.png)',
       },
       backgroundColor: {
         tintBlack: 'rgba(0, 0, 0, 0.5)',
