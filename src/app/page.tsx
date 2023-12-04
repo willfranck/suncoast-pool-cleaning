@@ -32,7 +32,7 @@ export default function Home() {
         <Services />
       </section>
       
-      <section className='w-full flex justify-center'>
+      <section className='w-[100vw] flex justify-center'>
         <Banner />
       </section>
 
