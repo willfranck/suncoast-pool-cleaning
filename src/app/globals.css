@@ -44,7 +44,7 @@ body {
   color: var(--color-body-text);
   background: var(--color-body);
   margin: 0;
-  overscroll-behavior-x: none;
+  overscroll-behavior: none;
 }
 
 a {
