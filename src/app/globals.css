@@ -48,6 +48,11 @@ body {
   overflow: hidden;
 }
 
+main {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
 a {
   text-decoration: none;
 }
