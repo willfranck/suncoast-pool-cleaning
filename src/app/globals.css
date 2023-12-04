@@ -45,10 +45,7 @@ body {
   background: var(--color-body);
   margin: 0;
   overscroll-behavior: none;
-}
-
-main {
-  overscroll-behavior: none;
+  overflow: hidden;
 }
 
 a {
