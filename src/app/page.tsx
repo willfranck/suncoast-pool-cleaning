@@ -28,11 +28,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='w-full flex flex-col items-center bg-[#016A70]'>
+      <section className='flex flex-col items-center w-full bg-[#016A70]'>
         <Services />
       </section>
       
-      <section className='w-[100vw] flex justify-center'>
+      <section className='flex justify-center w-full h-[35rem] md:h-[45rem] lg:h-[60rem]'>
         <Banner />
       </section>
 
