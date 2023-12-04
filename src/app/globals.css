@@ -35,8 +35,8 @@
 }
 
 html {
-  -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
 }
 
@@ -45,12 +45,10 @@ body {
   background: var(--color-body);
   margin: 0;
   overscroll-behavior: none;
-  overflow: hidden;
 }
 
 main {
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
+  overflow: hidden;
 }
 
 a {
