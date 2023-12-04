@@ -15,7 +15,7 @@ export default function AboutPage() {
         <NavBar />
 
         <article className='flex justify-center items-center flex-1 w-full'>
-          <div className='flex flex-col lg:flex-row justify-around items-center w-full'>
+          <div className='flex flex-col lg:flex-row justify-around items-center w-full max-w-[100rem]'>
             <Image
               src={'/spc_logo.png'}
               alt='Suncoast Pool Cleaning logo and title'
@@ -37,7 +37,7 @@ export default function AboutPage() {
         </article>
       </section>
 
-      <section className='bg-[#016A70]'>
+      <section className='flex justify-center items-center bg-[#016A70]'>
         <ServiceArea />
       </section>
 

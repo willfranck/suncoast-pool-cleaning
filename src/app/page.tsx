@@ -12,7 +12,7 @@ export default function Home() {
       <section className='relative flex flex-col items-center w-full min-h-hero bg-hero bg-cover bg-center isolate before:-z-10 before:absolute before:content-[""] before:inset-0 before:bg-tintBlack'>
         <NavBar />
 
-        <div className='flex flex-1 items-center px-4 pb-20'>
+        <div className='flex flex-1 items-center px-4 md:px-20 pt-10 pb-32'>
           <Link 
             href={'tel:+17272665144'}
           >
@@ -20,7 +20,7 @@ export default function Home() {
               src={'/spc_logo_full.png'}
               alt='Suncoast Pool Cleaning logo and title'
               loading='eager'
-              width={854}
+              width={1280}
               height={0}
             />
           </Link>

@@ -7,7 +7,7 @@ import { faCircleInfo } from "@fortawesome/free-solid-svg-icons/faCircleInfo"
 
 export default function NavBar() {
   return (
-    <nav className='flex justify-between items-center w-full h-20 px-4'>
+    <nav className='flex justify-between items-center w-full max-w-[120rem] h-20 px-4'>
       <div>
         <Link
           href={'tel:+17272665144'}
