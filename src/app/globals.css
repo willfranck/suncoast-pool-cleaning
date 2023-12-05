@@ -34,17 +34,26 @@
 }
 
 html {
+  height: 100%;
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
-  overscroll-behavior: contain;
+  overflow: hidden;
 }
 
 body {
+  height: 100%;
+  margin: 0;
   color: var(--color-body-text);
   background: var(--color-body);
-  margin: 0;
   overscroll-behavior: none;
+  overflow: hidden;
+}
+
+main {
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 a {
