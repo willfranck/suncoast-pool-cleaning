@@ -1,6 +1,6 @@
 export default function Banner() {
   return (
-    <article>
+    <article className='overflow-hidden'>
       <div className='banner h-[70vh]'></div>
     </article>
   )
