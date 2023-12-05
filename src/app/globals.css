@@ -29,6 +29,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height: 100vh;
   }
 }
 
@@ -36,8 +37,6 @@ html {
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
-  width: 100vw;
-  height: 100vh;
 }
 
 body {
