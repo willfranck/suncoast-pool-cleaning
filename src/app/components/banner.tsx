@@ -1,6 +1,6 @@
 export default function Banner() {
   return (
-    <article className='banner relative'>
+    <article className='banner relative h-[70vh]'>
 
     </article>
   )
