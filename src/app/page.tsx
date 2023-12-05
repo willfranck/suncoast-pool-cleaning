@@ -32,7 +32,7 @@ export default function Home() {
         <Services />
       </section>
       
-      <section className='w-full overflow-hidden'>
+      <section className='w-full'>
         <Banner />
       </section>
 

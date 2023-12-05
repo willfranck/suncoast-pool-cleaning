@@ -46,10 +46,6 @@ body {
   overscroll-behavior: none;
 }
 
-main {
-  overflow: hidden;
-}
-
 a {
   text-decoration: none;
 }
