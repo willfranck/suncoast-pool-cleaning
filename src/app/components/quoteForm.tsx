@@ -6,15 +6,36 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons'
 
 
 export default function QuoteForm() {
+  const [subject, setSubject] = useState('Get a Quote')
+  const [email, setEmail] = useState('')
   const [comments, setComments] = useState('')
 
-  function handleCommentChange(e: React.ChangeEvent<HTMLTextAreaElement>) {
-    const inputValue = e.target.value
-    setComments(inputValue.slice(0, 500))
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    
+    try {
+      const res = await fetch('/api/quoteFormContact', {
+        method: 'POST',
+        body: JSON.stringify({
+          subject, email, comments
+        }),
+        headers: {
+          'content-type': 'application/json'
+        },
+      })
+
+    } catch (err: any) {
+        console.error(err)
+        
+    }
   }
 
+
   return (
-    <form className='flex flex-col items-center w-full max-w-[45rem] px-6 py-20 bg-tintBlack shadow-xBlack'>
+    <form
+      onSubmit={handleSubmit} 
+      className='flex flex-col items-center w-full max-w-[45rem] px-6 py-20 bg-tintBlack shadow-xBlack'
+    >
       <div className='flex flex-col sm:flex-row justify-between items-center w-full'>
         <div className='max-w-[40rem]'>
           <Link
@@ -42,10 +63,12 @@ export default function QuoteForm() {
           </label>
           <select
             name='Subject'
+            value={subject}
+            onChange={(e) => setSubject(e.target.value)}
             className='mb-1 px-2 py-1 text-gray-800 rounded-sm'
           >
-            <option>Get a Quote</option>
-            <option>General Question</option>
+            <option value={'Get a Quote'}>Get a Quote</option>
+            <option value={'General Question'}>General Question</option>
           </select>
 
           <label 
@@ -57,6 +80,8 @@ export default function QuoteForm() {
           <input
             name='email'
             type='email'
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
             autoComplete='on'
             placeholder='Enter your email address'
@@ -76,7 +101,7 @@ export default function QuoteForm() {
           name='comments'
           required
           value={comments}
-          onChange={handleCommentChange}
+          onChange={(e) => setComments(e.target.value.slice(0, 500))}
           className='h-[10rem] px-2 py-1 text-gray-800 rounded-sm resize-none'
         ></textarea>
         
