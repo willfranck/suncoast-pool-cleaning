@@ -24,6 +24,12 @@ export default function QuoteForm() {
         },
       })
 
+      if (res.ok) {
+        window.alert('Your message is on its way!')
+      } else {
+          window.alert('Something went wrong with your submission')
+      }
+
     } catch (err: any) {
         console.error(err)
         
