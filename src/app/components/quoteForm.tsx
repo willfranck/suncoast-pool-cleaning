@@ -1,14 +1,15 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
+import toast, { Toaster } from 'react-hot-toast'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faPhone, faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 
 
 export default function QuoteForm() {
   const [subject, setSubject] = useState('Get a Quote')
   const [email, setEmail] = useState('')
-  const [comments, setComments] = useState('')
+  const [message, setMessage] = useState('')
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -17,7 +18,7 @@ export default function QuoteForm() {
       const res = await fetch('/api/quoteFormContact', {
         method: 'POST',
         body: JSON.stringify({
-          subject, email, comments
+          subject, email, message
         }),
         headers: {
           'content-type': 'application/json'
@@ -25,104 +26,132 @@ export default function QuoteForm() {
       })
 
       if (res.ok) {
-        window.alert('Your message is on its way!')
+        const toastNotify = () => toast('Your message is on its way!')
+        toastNotify()
+
       } else {
-          window.alert('Something went wrong with your submission')
+          const toastNotify = () => toast('Something went wrong')
+          toastNotify()
       }
 
     } catch (err: any) {
         console.error(err)
-        
     }
   }
 
 
   return (
-    <form
-      onSubmit={handleSubmit} 
-      className='flex flex-col items-center w-full max-w-[45rem] px-6 py-20 bg-tintBlack shadow-xBlack'
-    >
-      <div className='flex flex-col sm:flex-row justify-between items-center w-full'>
-        <div className='max-w-[40rem]'>
-          <Link
-            href={'tel:+17272665144'}
-            className='flex justify-center items-center py-2'
-          >
-            Give us a call&ensp;
-            <FontAwesomeIcon icon={faPhone} className='w-6 h-6' />
-            &ensp;727.266.5144
-          </Link>
-    
-          <hr className='w-full my-4 text-center text-gray-400 border-t-1 border-gray-400 overflow-visible before:relative before:content-["or"] before:bottom-3.5 before:text-white'></hr>
-
-          <h3 className='text-end'>
-            Send us an email for a FREE quote or with questions
-          </h3>
-        </div>
-
-        <div className='flex flex-col w-full sm:max-w-[15rem] sm:ml-6'>
-          <label 
-            htmlFor='subject'
-            className='text-sm text-gray-400 leading-loose'
-          >
-            Subject
-          </label>
-          <select
-            name='Subject'
-            value={subject}
-            onChange={(e) => setSubject(e.target.value)}
-            className='mb-1 px-2 py-1 text-gray-800 rounded-sm'
-          >
-            <option value={'Get a Quote'}>Get a Quote</option>
-            <option value={'General Question'}>General Question</option>
-          </select>
-
-          <label 
-            htmlFor='email'
-            className='text-sm text-gray-400 leading-loose'
-          >
-            Email
-          </label>
-          <input
-            name='email'
-            type='email'
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            autoComplete='on'
-            placeholder='Enter your email address'
-            className='mb-2 px-2 py-1 text-gray-800 rounded-sm'
-            ></input>
-        </div>
+    <article>
+      <div>
+        <Toaster
+          position='top-center'
+          toastOptions={{
+            duration: 4000,
+          }}
+        />
       </div>
 
-      <div className='flex flex-col w-full'>
-        <label 
-          htmlFor='text'
-          className='text-sm text-gray-400 leading-loose'
-        >
-          Comments
-        </label>
-        <textarea
-          name='comments'
-          required
-          value={comments}
-          onChange={(e) => setComments(e.target.value.slice(0, 500))}
-          className='h-[10rem] px-2 py-1 text-gray-800 rounded-sm resize-none'
-        ></textarea>
-        
-        <span className='text-end'>
-          Characters: {comments.length}/500
-        </span>
-      </div>
-
-      <button
-        type='submit'
-        aria-label='Submit quote form'
-        className='flex justify-around items-center w-40 mt-3 py-1 bg-blue-700 text-white font-semibold leading-6 rounded-sm shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500'
+      <form
+        onSubmit={handleSubmit} 
+        className='flex flex-col items-center w-full max-w-[45rem] px-6 py-20 bg-tintBlack shadow-xBlack'
       >
-        Send
-      </button>
-    </form>
+        <div className='flex flex-col sm:flex-row justify-between items-center w-full'>
+          <div className='max-w-[40rem]'>
+            <Link
+              href={'tel:+17272665144'}
+              className='flex justify-center items-center py-2'
+            >
+              Give us a call&ensp;
+              <FontAwesomeIcon icon={faPhone} className='w-6 h-6' />
+              &ensp;727.266.5144
+            </Link>
+      
+            <hr className='w-full my-4 text-center text-gray-400 border-t-1 border-gray-400 overflow-visible before:relative before:content-["or"] before:bottom-3.5 before:text-white'></hr>
+            
+            <Link
+              href={'mailto:willfranckcodes@gmail.com'}
+              className='text-end'
+            >
+              <h3>
+                Send us an email for a FREE quote or with questions &ensp;
+                <FontAwesomeIcon icon={faUpRightFromSquare} className='h-6' />
+              </h3>
+            </Link>
+          </div>
+
+          <div className='relative flex flex-col w-full sm:max-w-[15rem] sm:ml-6 before:bg-tintblack'>
+            <label 
+              htmlFor='subject'
+              className='text-sm text-gray-400 leading-loose'
+            >
+              Subject
+            </label>
+            <select
+              name='Subject'
+              value={subject}
+              disabled
+              onChange={(e) => setSubject(e.target.value)}
+              className='mb-1 px-2 py-1 text-gray-800 rounded-sm'
+            >
+              <option value={'Get a Quote'}>Get a Quote</option>
+              <option value={'General Question'}>General Question</option>
+            </select>
+
+            <label 
+              htmlFor='email'
+              className='text-sm text-gray-400 leading-loose'
+            >
+              Email
+            </label>
+            <input
+              name='Email'
+              type='email'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              disabled
+              autoComplete='on'
+              // placeholder='Enter your email address'
+              className='mb-2 px-2 py-1 text-gray-800 rounded-sm'
+              ></input>
+          </div>
+        </div>
+
+        <div className='flex flex-col w-full'>
+          <label 
+            htmlFor='text'
+            className='text-sm text-gray-400 leading-loose'
+          >
+            Comments
+          </label>
+          <textarea
+            name='Message'
+            required
+            disabled
+            value={message}
+            placeholder='Email Form Coming Soon! - Click the text above or the "Email Us" button to open your mail app'
+            onChange={(e) => setMessage(e.target.value.slice(0, 500))}
+            className='h-[10rem] px-6 py-3 text-gray-800 rounded-sm resize-none'
+          ></textarea>
+          
+          <span className='text-end'>
+            Characters: {message.length}/500
+          </span>
+        </div>
+
+        <Link
+          href={'mailto:willfranckcodes@gmail.com'}
+        >
+          <button
+            type='submit'
+            aria-label='Submit quote form'
+            className='flex justify-center items-center w-40 mt-3 py-2 bg-blue-700 text-white font-semibold leading-6 rounded-sm shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500'
+          >
+              Email Us &ensp;
+              <FontAwesomeIcon icon={faUpRightFromSquare} className='h-4' />
+          </button>
+        </Link>
+      </form>
+    </article>
   )
 }

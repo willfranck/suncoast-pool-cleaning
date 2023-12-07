@@ -36,7 +36,7 @@ export default function Home() {
         <Banner />
       </section>
 
-      <section className='relative flex flex-col items-center w-full bg-form bg-center bg-cover isolate before:-z-10 before:absolute before:content-[""] before:inset-0 before:bg-tintBlack overflow-hidden'>
+      <section className='relative flex flex-col items-center w-full isolate bg-form bg-center bg-cover overflow-hidden before:-z-10 before:absolute before:inset-0 before:bg-tintBlack'>
         <QuoteForm />
       </section>
 

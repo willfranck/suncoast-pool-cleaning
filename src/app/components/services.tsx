@@ -8,7 +8,7 @@ export default function Services() {
 
   return (
     <article className='flex flex-col items-center lg:w-full max-w-[75rem] px-4 py-20'>
-      <ul className='flex flex-col w-full px-2 space-y-10'>
+      <ul className='flex flex-col w-full px-2 space-y-5'>
         {services && services.map((service, index) => (
           <>
             <li 
