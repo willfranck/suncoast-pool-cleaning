@@ -18,6 +18,7 @@ const config: Config = {
       },
       backgroundColor: {
         tintBlack: 'rgba(0, 0, 0, 0.5)',
+        tintBlackLight: 'rgba(0, 0, 0, 0.22)',
       },
       boxShadow: {
         serviceImg: '-5px 10px 10px 3px rgba(0,0,0,0.5)',
