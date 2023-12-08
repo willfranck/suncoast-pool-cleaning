@@ -13,7 +13,7 @@ export default function ImageSlider() {
 
 
   return (
-    <article className='flex flex-col max-w-[60rem] py-20 overflow-hidden'>
+    <article className='flex flex-col max-w-[80rem] py-20 overflow-hidden'>
       <div className='flex flex-col items-center md:items-start px-6'>
         <p className='w-full md:w-1/2 pb-1'>
           {content.slider.subtitle}
@@ -42,7 +42,7 @@ export default function ImageSlider() {
           breakpoints={{
             768: {
               slidesPerView: 3,
-              spaceBetween: 30,
+              spaceBetween: 10,
               coverflowEffect: {
                 depth: 10,
               },
@@ -64,9 +64,9 @@ export default function ImageSlider() {
               <Image
                 src={image}
                 alt='Pictures'
-                width={300}
+                width={400}
                 height={0}
-                className='rounded-xl'
+                className='w-[20rem] sm:w-[25rem] rounded-lg'
               />
             </SwiperSlide>
           ))}
