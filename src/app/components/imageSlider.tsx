@@ -24,18 +24,18 @@ export default function ImageSlider() {
       <div className='mb-6 py-4 pl-4 md:pl-0'>
         <Swiper
           modules={[ EffectCoverflow, Autoplay ]}
-          effect='coverflow'
+          effect={'coverflow'}
           coverflowEffect={{
             rotate: 30,
             depth: 0,
             scale: 0.9,
+            slideShadows: false,
           }}
           grabCursor={true}
           initialSlide={1}
           slidesPerView={1}
           spaceBetween={-100}
           loop={true}
-          loopAdditionalSlides={5}
           autoplay={{
             delay: 4000,
           }}
@@ -52,9 +52,6 @@ export default function ImageSlider() {
               spaceBetween: 30,
               coverflowEffect: {
                 rotate: 15,
-                depth: 100,
-                stretch: 30,
-                scale: 1,
               },
             },
           }}
