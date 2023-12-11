@@ -13,7 +13,7 @@ export default function ImageSlider() {
 
 
   return (
-    <article className='flex flex-col max-w-[80rem] py-20 overflow-hidden'>
+    <article className='flex flex-col max-w-[80rem] md:px-6 py-20 overflow-hidden'>
       <div className='flex flex-col items-center md:items-start px-6'>
         <p className='w-full md:w-1/2 pb-1'>
           {content.slider.subtitle}
@@ -21,7 +21,7 @@ export default function ImageSlider() {
         <hr className='w-full md:w-1/2 border-t-1 border-gray-500'></hr>
       </div>
 
-      <div className='mb-6 py-4 pl-4 md:pl-0'>
+      <div className='mb-6 py-6 pl-6 md:pl-0'>
         <Swiper
           modules={[ EffectCoverflow, Autoplay ]}
           effect={'coverflow'}
@@ -43,9 +43,6 @@ export default function ImageSlider() {
             768: {
               slidesPerView: 3,
               spaceBetween: 10,
-              coverflowEffect: {
-                depth: 10,
-              },
             },
             1200: {
               slidesPerView: 3,
