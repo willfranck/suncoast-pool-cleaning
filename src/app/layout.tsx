@@ -3,15 +3,10 @@ import { Analytics } from '@vercel/analytics/react'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { Manrope } from 'next/font/google'
+import { manrope } from '@utils/fonts'
 import './globals.css'
 
 library.add(fas, fab)
-
-const manrope = Manrope({ 
-  subsets: ['latin'],
-  weight: ['400', '600'],
-})
 
 
 export const metadata: Metadata = {
