@@ -11,10 +11,9 @@ const config: Config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        hero: 'url(/spc_home_splash.jpg)',
-        form: 'url(/spc_home_form.jpg)',
-        about: 'url(/spc_about_splash.jpg)',
-        banner: 'url(/spc_truck_banner.png)',
+        hero: 'url(/spc_home_splash.webp)',
+        form: 'url(/spc_quote_form.webp)',
+        about: 'url(/spc_about_splash.webp)',
       },
       backgroundColor: {
         tintBlack: 'rgba(0, 0, 0, 0.5)',

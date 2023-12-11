@@ -23,7 +23,7 @@ export default function ServiceArea() {
 
       <div>
         <Image 
-          src={'/spc_service_area.png'}
+          src={'/spc_service_area.webp'}
           alt="Map of our service area"
           width={1024}
           height={0}

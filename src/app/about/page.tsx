@@ -17,7 +17,7 @@ export default function AboutPage() {
         <article className='flex justify-center items-center flex-1 w-full'>
           <div className='flex flex-col lg:flex-row justify-around items-center w-full max-w-[100rem]'>
             <Image
-              src={'/spc_logo.png'}
+              src={'/spc_logo.webp'}
               alt='Suncoast Pool Cleaning logo and title'
               loading='eager'
               width={256}

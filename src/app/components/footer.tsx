@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className='flex flex-col justify-center items-center w-full py-10 bg-black'>
       <div className='flex justify-between items-center w-full max-w-[25rem] px-5 pb-10'>
         <Image
-          src={'/spc_logo.png'}
+          src={'/spc_logo.webp'}
           alt='Suncoast Pool Cleaning logo'
           width={96}
           height={0}

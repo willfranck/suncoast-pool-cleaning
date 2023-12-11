@@ -18,7 +18,7 @@ export default function Home() {
             href={'tel:+17272665144'}
           >
             <Image 
-              src={'/spc_logo_full.png'}
+              src={'/spc_logo_full.webp'}
               alt='Suncoast Pool Cleaning logo and title'
               loading='eager'
               width={1280}
