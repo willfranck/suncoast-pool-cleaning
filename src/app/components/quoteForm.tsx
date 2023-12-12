@@ -69,7 +69,7 @@ export default function QuoteForm() {
             <hr className='w-full my-4 text-center text-gray-400 border-t-1 border-gray-400 overflow-visible before:relative before:content-["or"] before:bottom-3.5 before:text-white'></hr>
             
             <Link
-              href={'mailto:willfranckcodes@gmail.com'}
+              href={'mailto:suncoastpoolclean@gmail.com'}
               className='text-end'
             >
               <h3>
@@ -140,7 +140,7 @@ export default function QuoteForm() {
         </div>
 
         <Link
-          href={'mailto:willfranckcodes@gmail.com'}
+          href={'mailto:suncoastpoolclean@gmail.com'}
         >
           <button
             type='submit'

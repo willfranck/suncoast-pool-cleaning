@@ -36,9 +36,12 @@ export default function Footer() {
       </div>
 
       <p className='text-xs'>Designed and built by 
-        <span className='text-xs text-blue-400'>
+        <Link 
+          href={'https://www.linkedin.com/in/william-franck'}
+          className='text-blue-400'
+        >
           &ensp;willfranckcodes
-        </span>
+        </Link>
       </p>
     </footer>
   )

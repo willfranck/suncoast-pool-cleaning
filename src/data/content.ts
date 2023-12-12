@@ -78,7 +78,7 @@ export default {
     },
     {
       comments: "Quam veniam eos saepe nostrum accusantium, qui cumque reiciendis quisquam? Quibusdam asperiores sapiente, cupiditate dolore pariatur eos aut inventore illo sint culpa?",
-      name: "Mary J. Wahnuh",
+      name: "Jeff Bezos",
     },
   ],
 }
