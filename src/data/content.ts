@@ -51,15 +51,15 @@ export default {
   slider: {
     subtitle: "Dive into Our Pool Cleaning Journey",
     img: [
-      '/spc_slider_img_9.webp',
+      '/spc_about_splash.webp',
       '/spc_slider_img_2.webp',
       '/spc_slider_img_3.webp',
-      '/spc_about_splash.webp',
       '/spc_slider_img_4.webp',
       '/spc_slider_img_5.webp',
       '/spc_slider_img_6.webp',
       '/spc_slider_img_7.webp',
       '/spc_slider_img_8.webp',
+      '/spc_slider_img_9.webp',
     ],
   },
 

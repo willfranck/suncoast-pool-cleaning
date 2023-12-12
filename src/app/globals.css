@@ -29,6 +29,14 @@
     background-size: cover;
     height: 100vh;
   }
+
+  .swiper-thumbs .thumb-slide {
+    opacity: 0.4;
+  }
+
+  .swiper-thumbs .swiper-slide-thumb-active {
+    opacity: 1;
+  }
 }
 
 html {

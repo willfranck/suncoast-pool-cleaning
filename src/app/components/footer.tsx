@@ -35,7 +35,8 @@ export default function Footer() {
         </div>
       </div>
 
-      <p className='text-xs'>Designed and built by 
+      <p className='text-xs'>
+        Designed and built by 
         <Link 
           href={'https://www.linkedin.com/in/william-franck'}
           className='text-blue-400'
