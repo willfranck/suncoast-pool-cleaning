@@ -86,7 +86,7 @@ export default function ImageSlider() {
               <SwiperSlide key={index} className='thumb-slide'>
                 <Image
                   src={image}
-                  alt={`Featured pool project # ${index}`}
+                  alt={`Featured pool project # ${index} thumbnail`}
                   width={80}
                   height={0}
                   className='w-full max-w-[7rem] h-full max-h-[7rem] object-cover rounded-sm'
