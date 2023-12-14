@@ -9,11 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         hero: 'url(/spc_home_splash.webp)',
         form: 'url(/spc_quote_form.webp)',
         about: 'url(/spc_about_splash.webp)',
+        gradientBlue: 'linear-gradient(to bottom right, #081E2F 45%, #174D62)',
       },
       backgroundColor: {
         tintBlack: 'rgba(0, 0, 0, 0.5)',
