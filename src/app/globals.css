@@ -17,28 +17,6 @@
   --font-size-small: clamp(0.8rem, 4vw, 0.9rem);
 }
 
-@layer components {
-  .banner::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: url(/spc_truck_banner.webp) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 100vh;
-  }
-
-  .swiper-thumbs .thumb-slide {
-    opacity: 0.4;
-  }
-
-  .swiper-thumbs .swiper-slide-thumb-active {
-    opacity: 1;
-  }
-}
-
 html {
   height: 100%;
   text-size-adjust: 100%;
@@ -91,4 +69,26 @@ p {
 
 span {
   font-size: var(--font-size-small);
+}
+
+@layer components {
+  .banner::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url(/spc_truck_banner.webp) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .swiper-thumbs .thumb-slide {
+    opacity: 0.4;
+  }
+
+  .swiper-thumbs .swiper-slide-thumb-active {
+    opacity: 1;
+  }
 }
