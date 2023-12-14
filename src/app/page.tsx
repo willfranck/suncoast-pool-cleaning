@@ -32,7 +32,7 @@ export default function Home() {
         <Services />
       </section>
       
-      <section className='relative w-full overflow-hidden before:absolute before:inset-0 before:bg-tintBlackLight'>
+      <section className='w-full'>
         <Banner />
       </section>
 

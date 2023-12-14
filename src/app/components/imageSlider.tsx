@@ -1,12 +1,10 @@
 'use client'
-import { useCallback, useState } from 'react'
+import { useState } from 'react'
 import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Swiper as SwiperClass } from 'swiper/types'
 import { EffectCreative, Grid, Thumbs, Autoplay } from 'swiper/modules'
 import 'swiper/css/bundle'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowLeftLong, faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
 import content from '@data/content'
 
 
@@ -15,11 +13,16 @@ export default function ImageSlider() {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass>()
   const sliderImages = content.slider.img
 
+  function scrollToTop() {
+    const scrollToArticle = document.getElementById('galleryTitle')
+    scrollToArticle?.scrollIntoView()
+  }
+
 
   return (
     <article className='flex flex-col items-center w-full max-w-[80rem] px-6 py-20 overflow-hidden'>
       <div className='flex flex-col md:flex-row justify-between items-end w-full md:w-3/4 px-3'>
-        <h3>Photo Gallery</h3>
+        <h3 id='galleryTitle'>Photo Gallery</h3>
         <p className='pb-1 text-center'>
           {content.slider.subtitle}
         </p>
@@ -29,6 +32,7 @@ export default function ImageSlider() {
       <div className='flex flex-col md:flex-row items-center md:items-start'>
         <div className='w-full max-w-[20rem] sm:max-w-[22.5rem] lg:max-w-[32rem] mt-6 md:mr-6 rounded-md overflow-hidden'>
           <Swiper
+            className='swiper-main'
             onSwiper={setSwiperMain}
             modules={[ EffectCreative, Thumbs, Autoplay ]}
             effect={'creative'}
@@ -51,11 +55,14 @@ export default function ImageSlider() {
             speed={600}
             autoplay={{
               delay: 4000,
+              disableOnInteraction: true,
             }}
-            className='swiper-main'
           >
             {sliderImages && sliderImages.map((image, index) => (
-              <SwiperSlide key={index} className='main-slide'>
+              <SwiperSlide 
+                key={index}
+                className='main-slide'
+              >
                 <Image
                   src={image}
                   alt={`Featured pool project ${index + 1}`}
@@ -69,6 +76,7 @@ export default function ImageSlider() {
 
         <div className='flex justify-center items-center max-w-[20rem] mt-6'>
           <Swiper
+            className='swiper-thumbs'
             onSwiper={setThumbsSwiper}
             modules={[ Grid ]}
             grid={{
@@ -84,10 +92,13 @@ export default function ImageSlider() {
                 }
               }
             }}
-            className='swiper-thumbs'
           >
             {sliderImages && sliderImages.map((image, index) => (
-              <SwiperSlide key={index} className='thumb-slide'>
+              <SwiperSlide 
+                key={index} 
+                onClick={scrollToTop} 
+                className='thumb-slide'
+              >
                 <Image
                   src={image}
                   alt={`Featured pool project ${index + 1} thumbnail`}

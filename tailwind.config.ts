@@ -10,8 +10,9 @@ const config: Config = {
     extend: {
       backgroundImage: {
         hero: 'url(/spc_home_splash.webp)',
-        form: 'url(/spc_quote_form.webp)',
         about: 'url(/spc_about_splash.webp)',
+        form: 'url(/spc_quote_form.webp)',
+        banner: 'url(/spc_truck_banner.webp)',
         gradientBlue: 'linear-gradient(to bottom right, #081E2F 45%, #174D62)',
       },
       backgroundColor: {
