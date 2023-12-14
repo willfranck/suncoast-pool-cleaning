@@ -26,7 +26,7 @@ export default function ImageSlider() {
       </div>
       <hr className='w-full md:w-3/4 border-t-1 border-gray-500'></hr>
 
-      <div className='flex flex-col md:flex-row items-center md:items-start md:space-x-4'>
+      <div className='flex flex-col md:flex-row items-center md:items-start'>
         <div className='w-full max-w-[20rem] sm:max-w-[22.5rem] lg:max-w-[32rem] mt-6 md:mr-6 rounded-md overflow-hidden'>
           <Swiper
             onSwiper={setSwiperMain}
@@ -46,18 +46,19 @@ export default function ImageSlider() {
             }}
             grabCursor={true}
             slidesPerView={1}
-            initialSlide={1}
+            initialSlide={0}
             loop={true}
             speed={600}
             autoplay={{
               delay: 4000,
             }}
+            className='swiper-main'
           >
             {sliderImages && sliderImages.map((image, index) => (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={index} className='main-slide'>
                 <Image
                   src={image}
-                  alt={`Featured pool project # ${index}`}
+                  alt={`Featured pool project ${index + 1}`}
                   width={512}
                   height={0}
                 />
@@ -65,12 +66,6 @@ export default function ImageSlider() {
             ))}
           </Swiper>
         </div>
-
-        {/* <div className='flex justify-center items-center my-4'>
-          <FontAwesomeIcon icon={faArrowLeftLong} className='w-10 h-5' />
-          <span>Swipe</span>
-          <FontAwesomeIcon icon={faArrowRightLong} className='w-10 h-5' />
-        </div> */}
 
         <div className='flex justify-center items-center max-w-[20rem] mt-6'>
           <Swiper
@@ -81,7 +76,6 @@ export default function ImageSlider() {
               fill: 'row',
             }}
             slidesPerView={3}
-            initialSlide={1}
             spaceBetween={10}
             breakpoints={{
               768: {
@@ -96,7 +90,7 @@ export default function ImageSlider() {
               <SwiperSlide key={index} className='thumb-slide'>
                 <Image
                   src={image}
-                  alt={`Featured pool project # ${index} thumbnail`}
+                  alt={`Featured pool project ${index + 1} thumbnail`}
                   width={80}
                   height={0}
                   className='w-full max-w-[6.3rem] h-full max-h-[6.3rem] object-cover rounded-sm'
