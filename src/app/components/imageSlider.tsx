@@ -17,14 +17,17 @@ export default function ImageSlider() {
 
 
   return (
-    <article className='flex flex-col items-center w-full px-6 py-20 overflow-hidden'>
-      <p className='self-start w-full md:w-1/2 pb-1'>
-        {content.slider.subtitle}
-      </p>
-      <hr className='self-start w-full md:w-1/2 border-t-1 border-gray-500'></hr>
+    <article className='flex flex-col items-center w-full max-w-[80rem] px-6 py-20 overflow-hidden'>
+      <div className='flex flex-col md:flex-row justify-between items-end w-full md:w-3/4 px-3'>
+        <h3>Photo Gallery</h3>
+        <p className='pb-1 text-center'>
+          {content.slider.subtitle}
+        </p>
+      </div>
+      <hr className='w-full md:w-3/4 border-t-1 border-gray-500'></hr>
 
-      <div className='flex flex-col md:flex-row items-center md:items-start my-6 md:space-x-4'>
-        <div className='w-[20rem] sm:w-[25rem] lg:w-[30rem] rounded-sm overflow-hidden'>
+      <div className='flex flex-col md:flex-row items-center md:items-start md:space-x-4'>
+        <div className='w-full max-w-[20rem] sm:max-w-[22.5rem] lg:max-w-[32rem] mt-6 md:mr-6 rounded-md overflow-hidden'>
           <Swiper
             onSwiper={setSwiperMain}
             modules={[ EffectCreative, Thumbs, Autoplay ]}
@@ -55,31 +58,38 @@ export default function ImageSlider() {
                 <Image
                   src={image}
                   alt={`Featured pool project # ${index}`}
-                  width={480}
+                  width={512}
                   height={0}
                 />
               </SwiperSlide>
             ))}
           </Swiper>
-
-          <div className='flex justify-center items-center py-1 bg-black'>
-            <FontAwesomeIcon icon={faArrowLeftLong} className='w-10 h-5' />
-            <span>Swipe</span>
-            <FontAwesomeIcon icon={faArrowRightLong} className='w-10 h-5' />
-          </div>
         </div>
 
-        <div className='flex justify-center items-center max-w-sm px-6 mt-6 md:mt-0'>
+        {/* <div className='flex justify-center items-center my-4'>
+          <FontAwesomeIcon icon={faArrowLeftLong} className='w-10 h-5' />
+          <span>Swipe</span>
+          <FontAwesomeIcon icon={faArrowRightLong} className='w-10 h-5' />
+        </div> */}
+
+        <div className='flex justify-center items-center max-w-[20rem] mt-6'>
           <Swiper
             onSwiper={setThumbsSwiper}
             modules={[ Grid ]}
             grid={{
-              rows: 3,
+              rows: 1,
               fill: 'row',
             }}
             slidesPerView={3}
             initialSlide={1}
             spaceBetween={10}
+            breakpoints={{
+              768: {
+                grid: {
+                  rows: 3,
+                }
+              }
+            }}
             className='swiper-thumbs'
           >
             {sliderImages && sliderImages.map((image, index) => (
@@ -89,7 +99,7 @@ export default function ImageSlider() {
                   alt={`Featured pool project # ${index} thumbnail`}
                   width={80}
                   height={0}
-                  className='w-full max-w-[7rem] h-full max-h-[7rem] object-cover rounded-sm'
+                  className='w-full max-w-[6.3rem] h-full max-h-[6.3rem] object-cover rounded-sm'
                 />
               </SwiperSlide>
             ))}

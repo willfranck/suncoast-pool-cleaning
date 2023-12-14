@@ -26,10 +26,10 @@ export default function AboutPage() {
             />
             
             <div className='flex justify-center w-full lg:max-w-[60rem] bg-tintBlack'>
-              <div className='px-4 sm:px-10 py-10 space-y-10'>
+              <div className='px-6 sm:px-10 py-10 space-y-10'>
                 <h2>{content.about.title}</h2>
-                <p>&emsp;{content.about.paragraph1}</p>
-                <p>&emsp;{content.about.paragraph2}</p>
+                <p>- {content.about.paragraph1}</p>
+                <p>- {content.about.paragraph2}</p>
                 <p className='text-end'>{content.about.paragraph3}</p>
               </div>
             </div>
