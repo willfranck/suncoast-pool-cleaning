@@ -19,6 +19,7 @@ export default function Footer() {
         <div className='flex flex-col space-y-4'>
           <Link
             href={'/'}
+            aria-label='Homepage link'
             className='flex items-center'
           >
             <FontAwesomeIcon icon={faHouse} className='w-8 h-8' />
@@ -27,6 +28,7 @@ export default function Footer() {
 
           <Link
             href={'/about'}
+            aria-label='About page link'
             className='flex items-center'
           >
             <FontAwesomeIcon icon={faCircleInfo} className='w-8 h-8' />
@@ -35,6 +37,7 @@ export default function Footer() {
 
           <Link
             href={'/'}
+            aria-label='Facebook page link'
             className='flex items-center'
           >
             <FontAwesomeIcon icon={faFacebook} className='w-8 h-8' />
@@ -47,6 +50,7 @@ export default function Footer() {
         Designed and built by 
         <Link 
           href={'https://www.linkedin.com/in/william-franck'}
+          aria-label='Developer LinkedIn page'
           className='text-blue-400'
         >
           &ensp;willfranckcodes

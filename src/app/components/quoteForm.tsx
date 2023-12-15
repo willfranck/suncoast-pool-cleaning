@@ -59,6 +59,7 @@ export default function QuoteForm() {
           <div className='max-w-[40rem]'>
             <Link
               href={'tel:+17272665144'}
+              aria-label='Phone number link'
               className='flex justify-center items-center py-2'
             >
               Give us a call&ensp;
@@ -70,6 +71,7 @@ export default function QuoteForm() {
             
             <Link
               href={'mailto:suncoastpoolclean@gmail.com'}
+              aria-label='Email link'
               className='text-center sm:text-end'
             >
               <p className='font-bold text-xl'>
@@ -88,13 +90,24 @@ export default function QuoteForm() {
             </label>
             <select
               name='Subject'
+              aria-label='Subject dropdown menu'
               value={subject}
               disabled
               onChange={(e) => setSubject(e.target.value)}
               className='mb-1 px-2 py-1 text-gray-800 rounded-sm'
             >
-              <option value={'Get a Quote'}>Get a Quote</option>
-              <option value={'General Question'}>General Question</option>
+              <option 
+                aria-label='Get a Quote option'
+                value={'Get a Quote'} 
+              >
+                Get a Quote
+              </option>
+              <option 
+                aria-label='General Question option'
+                value={'General Question'}
+              >
+                General Question
+              </option>
             </select>
 
             <label 
@@ -105,6 +118,7 @@ export default function QuoteForm() {
             </label>
             <input
               name='Email'
+              aria-label='Email input'
               type='email'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -126,6 +140,7 @@ export default function QuoteForm() {
           </label>
           <textarea
             name='Message'
+            aria-label='Email comments text area'
             required
             disabled
             value={message}

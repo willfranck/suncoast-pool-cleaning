@@ -9,6 +9,7 @@ export default function NavBar() {
       <div>
         <Link
           href={'tel:+17272665144'}
+          aria-label='Phone number link'
           className='flex items-center p-2'
         >
           <FontAwesomeIcon icon={faPhone} className='w-6 h-6' />
@@ -19,6 +20,7 @@ export default function NavBar() {
       <div className='flex justify-between w-24'>
         <Link 
           href={'/'}
+          aria-label='Homepage link'
           className='p-2'
         >
           <FontAwesomeIcon icon={faHouse} className='w-6 h-6' />
@@ -26,6 +28,7 @@ export default function NavBar() {
 
         <Link 
           href={'/about'}
+          aria-label='About page link'
           className='p-2'
         >
           <FontAwesomeIcon icon={faCircleInfo} className='w-6 h-6' />
