@@ -52,14 +52,15 @@ export default function QuoteForm() {
       </div>
 
       <form
-        onSubmit={handleSubmit} 
+        onSubmit={handleSubmit}
+        aria-label='Email us for a quote or with questions' 
         className='flex flex-col items-center w-full max-w-[45rem] px-6 py-20 bg-tintBlack shadow-xBlack'
       >
         <div className='flex flex-col sm:flex-row justify-between items-center w-full'>
           <div className='max-w-[40rem]'>
             <Link
               href={'tel:+17272665144'}
-              aria-label='Phone number link'
+              aria-label='Give us a call'
               className='flex justify-center items-center py-2'
             >
               Give us a call&ensp;
@@ -71,7 +72,7 @@ export default function QuoteForm() {
             
             <Link
               href={'mailto:suncoastpoolclean@gmail.com'}
-              aria-label='Email link'
+              aria-label='Send us an email'
               className='text-center sm:text-end'
             >
               <p className='font-bold text-xl'>
@@ -118,7 +119,7 @@ export default function QuoteForm() {
             </label>
             <input
               name='Email'
-              aria-label='Email input'
+              aria-label='Enter your email address'
               type='email'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -156,10 +157,11 @@ export default function QuoteForm() {
 
         <Link
           href={'mailto:suncoastpoolclean@gmail.com'}
+          aria-label='Submit email form'
         >
           <button
             type='submit'
-            aria-label='Submit quote form'
+            aria-label='Submit email button'
             className='flex justify-center items-center w-40 mt-3 py-2 bg-blue-700 text-white font-semibold leading-6 rounded-sm shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500'
           >
               Email Us &ensp;

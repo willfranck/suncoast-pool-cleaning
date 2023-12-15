@@ -16,7 +16,7 @@ export default function Home() {
         <div className='flex flex-1 items-center px-4 md:px-20 pt-10 pb-32'>
           <Link 
             href={'tel:+17272665144'}
-            aria-label='Business name and phone number link'
+            aria-label='Suncoast Pool Cleaning. Call us for a quote or with questions'
           >
             <Image 
               src={'/spc_logo_full.webp'}
