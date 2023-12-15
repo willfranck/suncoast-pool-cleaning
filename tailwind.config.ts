@@ -13,7 +13,7 @@ const config: Config = {
         about: 'url(/spc_about_splash.webp)',
         form: 'url(/spc_quote_form.webp)',
         banner: 'url(/spc_truck_banner.webp)',
-        gradientBlue: 'linear-gradient(to bottom right, #081E2F 45%, #174D62)',
+        gradientBlue: 'linear-gradient(to bottom right, #081E2F 40%, #174D62 75%)',
       },
       backgroundColor: {
         tintBlack: 'rgba(0, 0, 0, 0.5)',

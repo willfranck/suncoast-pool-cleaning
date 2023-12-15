@@ -11,7 +11,7 @@ import content from '@data/content'
 export default function AboutPage() {
   return (
     <main>
-      <section className='relative flex flex-col items-center w-full min-h-hero bg-about bg-cover bg-center isolate before:-z-10 before:absolute before:content-[""] before:inset-0 before:bg-tintBlack'>
+      <section className='relative flex flex-col items-center w-full min-h-hero bg-about bg-cover bg-center isolate before:absolute before:inset-0 before:-z-10 before:bg-tintBlack'>
         <NavBar />
 
         <article className='flex justify-center items-center flex-1 w-full'>
@@ -37,7 +37,7 @@ export default function AboutPage() {
         </article>
       </section>
 
-      <section className='flex justify-center items-center bg-[#016A70]'>
+      <section className='flex justify-center items-center bg-[#90DAEE]'>
         <ServiceArea />
       </section>
 

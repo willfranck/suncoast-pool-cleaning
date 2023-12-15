@@ -10,7 +10,7 @@ import Footer from '@components/footer'
 export default function Home() {
   return (
     <main className='flex flex-col items-center'>
-      <section className='relative flex flex-col items-center w-full min-h-hero bg-hero bg-cover bg-center isolate before:-z-10 before:absolute before:content-[""] before:inset-0 before:bg-tintBlack'>
+      <section className='relative flex flex-col items-center w-full min-h-hero bg-hero bg-cover bg-center isolate before:absolute before:inset-0 before:-z-10 before:bg-tintBlack'>
         <NavBar />
 
         <div className='flex flex-1 items-center px-4 md:px-20 pt-10 pb-32'>
@@ -37,7 +37,7 @@ export default function Home() {
         <Banner />
       </section>
 
-      <section className='relative flex flex-col items-center w-full isolate bg-form bg-center bg-cover overflow-hidden before:-z-10 before:absolute before:inset-0 before:bg-tintBlack'>
+      <section className='relative flex flex-col items-center w-full bg-form bg-center bg-cover overflow-hidden isolate before:absolute before:inset-0 before:-z-10 before:bg-tintBlack'>
         <QuoteForm />
       </section>
 
