@@ -1,8 +1,6 @@
 import Link from "next/link"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPhone } from '@fortawesome/free-solid-svg-icons/faPhone'
-import { faHouse } from "@fortawesome/free-solid-svg-icons/faHouse"
-import { faCircleInfo } from "@fortawesome/free-solid-svg-icons/faCircleInfo"
+import { faPhone, faHouse, faCircleInfo } from '@fortawesome/free-solid-svg-icons'
 
 
 export default function NavBar() {

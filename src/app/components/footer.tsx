@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
-import { faCircleInfo } from '@fortawesome/free-solid-svg-icons'
+import { faHouse, faCircleInfo } from '@fortawesome/free-solid-svg-icons'
 
 
 export default function Footer() {
@@ -17,6 +17,14 @@ export default function Footer() {
         />
 
         <div className='flex flex-col space-y-4'>
+          <Link
+            href={'/'}
+            className='flex items-center'
+          >
+            <FontAwesomeIcon icon={faHouse} className='w-8 h-8' />
+            <span>&ensp;Home</span>      
+          </Link>
+
           <Link
             href={'/about'}
             className='flex items-center'
