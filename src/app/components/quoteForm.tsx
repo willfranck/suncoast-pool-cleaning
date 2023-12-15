@@ -70,9 +70,9 @@ export default function QuoteForm() {
             
             <Link
               href={'mailto:suncoastpoolclean@gmail.com'}
-              className='text-end'
+              className='text-center sm:text-end'
             >
-              <h3>
+              <h3 className='text-xl'>
                 Send us an email for a FREE quote or with questions &ensp;
                 <FontAwesomeIcon icon={faUpRightFromSquare} className='h-6' />
               </h3>

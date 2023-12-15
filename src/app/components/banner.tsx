@@ -34,7 +34,6 @@ export default function Banner() {
         setArticleHeight(articleRef.current.clientHeight)
       }
     }
-
     updateArticleHeight()
 
     window.addEventListener('resize', updateArticleHeight)
@@ -44,13 +43,13 @@ export default function Banner() {
     }
   }, [])
 
-  const translateY = (scrollY - 600) * 0.3
+  const translateY = scrollY * 0.3
 
 
   return (
     <article 
       ref={articleRef} 
-      className='relative h-[70vh] overflow-hidden'
+      className='relative h-[75vh] overflow-hidden'
     >
       <div
         style={{ transform: `translateY(${translateY}px)` }}

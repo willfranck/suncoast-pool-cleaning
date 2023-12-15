@@ -80,18 +80,11 @@ export default function ImageSlider() {
             onSwiper={setThumbsSwiper}
             modules={[ Grid ]}
             grid={{
-              rows: 1,
+              rows: 3,
               fill: 'row',
             }}
             slidesPerView={3}
             spaceBetween={10}
-            breakpoints={{
-              768: {
-                grid: {
-                  rows: 3,
-                }
-              }
-            }}
           >
             {sliderImages && sliderImages.map((image, index) => (
               <SwiperSlide 
