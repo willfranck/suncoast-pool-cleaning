@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faHouse, faCircleInfo } from '@fortawesome/free-solid-svg-icons'
 

@@ -19,7 +19,6 @@ export default function Banner() {
         }
       })
     }
-
     window.addEventListener('scroll', handleScroll)
 
     return () => {

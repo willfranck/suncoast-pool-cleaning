@@ -13,7 +13,7 @@ export default function Services() {
           <>
             <li 
               key={index} 
-              className={'lg:flex lg:' + service.flexDirection + ' justify-between items-center py-10'}
+              className={`lg:flex lg:${service.flexDirection} justify-between items-center py-10`}
             >
               <Image 
                 src={service.img}
