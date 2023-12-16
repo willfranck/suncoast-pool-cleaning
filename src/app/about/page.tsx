@@ -11,7 +11,7 @@ import content from '@data/content'
 export default function AboutPage() {
   return (
     <main>
-      <section className='relative flex flex-col items-center w-full min-h-hero bg-about bg-cover bg-center isolate before:absolute before:inset-0 before:-z-10 before:bg-tintBlack'>
+      <section className='relative flex flex-col items-center w-full min-h-hero pb-20 bg-about bg-cover bg-center isolate before:absolute before:inset-0 before:-z-10 before:bg-tintBlack'>
         <NavBar />
 
         <article className='flex justify-center items-center flex-1 w-full'>
@@ -25,13 +25,11 @@ export default function AboutPage() {
               className='m-20'
             />
             
-            <div className='flex justify-center w-full lg:max-w-[60rem] bg-tintBlack'>
-              <div className='px-6 sm:px-10 py-10 space-y-10'>
-                <h2>{content.about.title}</h2>
-                <p>- {content.about.paragraph1}</p>
-                <p>- {content.about.paragraph2}</p>
-                <p className='text-end'>{content.about.paragraph3}</p>
-              </div>
+            <div className='flex flex-col justify-center w-full lg:max-w-[60rem] px-6 sm:px-10 space-y-10 text-white'>
+              <h2>{content.about.title}</h2>
+              <p>{content.about.paragraph1}</p>
+              <p>{content.about.paragraph2}</p>
+              <p className='text-end'>{content.about.paragraph3}</p>
             </div>
           </div>
         </article>

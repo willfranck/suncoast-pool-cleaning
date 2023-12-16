@@ -16,7 +16,7 @@ const config: Config = {
         gradientBlue: 'linear-gradient(to bottom right, #081E2F 40%, #174D62 75%)',
       },
       backgroundColor: {
-        tintBlack: 'rgba(0, 0, 0, 0.5)',
+        tintBlack: 'rgba(0, 0, 0, 0.6)',
         tintBlackLight: 'rgba(0, 0, 0, 0.22)',
       },
       boxShadow: {
