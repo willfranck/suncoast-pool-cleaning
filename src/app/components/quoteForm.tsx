@@ -73,6 +73,8 @@ export default function QuoteForm() {
             <Link
               href={'mailto:suncoastpoolclean@gmail.com'}
               aria-label='Send us an email'
+              target='_blank'
+              rel='noopener noreferrer'
               className='text-center sm:text-end'
             >
               <p className='font-bold text-xl'>
@@ -158,6 +160,8 @@ export default function QuoteForm() {
         <Link
           href={'mailto:suncoastpoolclean@gmail.com'}
           aria-label='Submit email form'
+          target='_blank'
+          rel='noopener noreferrer'
         >
           <button
             type='submit'

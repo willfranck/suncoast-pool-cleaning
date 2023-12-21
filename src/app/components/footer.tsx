@@ -38,6 +38,8 @@ export default function Footer() {
           <Link
             href={'/'}
             aria-label='Check out our Facebook page'
+            target='_blank'
+            rel='noopener noreferrer'
             className='flex items-center'
           >
             <FontAwesomeIcon icon={faFacebook} className='w-8 h-8' />
@@ -51,6 +53,8 @@ export default function Footer() {
         <Link 
           href={'https://www.linkedin.com/in/william-franck'}
           aria-label='Developer LinkedIn page'
+          target='_blank'
+          rel='noopener noreferrer'
           className='text-blue-400'
         >
           &ensp;willfranckcodes
