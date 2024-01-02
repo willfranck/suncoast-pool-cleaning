@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Providers } from 'providers'
 import { Analytics } from '@vercel/analytics/react'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
@@ -25,8 +26,10 @@ export default function RootLayout({
         suppressHydrationWarning={true} 
         className={manrope.className}
       >
-        {children}
-        <Analytics />
+        <Providers>
+          {children}
+          <Analytics />
+        </Providers>
       </body>
     </html>
   )
