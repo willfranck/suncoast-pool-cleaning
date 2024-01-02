@@ -36,7 +36,7 @@ export default function Footer() {
           </Link>
 
           <Link
-            href={'/'}
+            href={'https://www.facebook.com/profile.php?id=100093613149972'}
             aria-label='Check out our Facebook page'
             target='_blank'
             rel='noopener noreferrer'
