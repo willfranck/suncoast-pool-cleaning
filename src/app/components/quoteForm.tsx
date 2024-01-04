@@ -11,6 +11,15 @@ export default function QuoteForm() {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
 
+  const handleInput = (e: React.FormEvent<HTMLInputElement>) => {
+    e.currentTarget.setCustomValidity('')
+    setEmail(e.currentTarget.value)
+  }
+
+  const handleInvalidEmail = (e: React.FormEvent<HTMLInputElement>) => {
+    e.currentTarget.setCustomValidity('Please enter a valid email address')
+  }
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     
@@ -124,12 +133,13 @@ export default function QuoteForm() {
               aria-label='Enter your email address'
               type='email'
               value={email}
-              pattern='/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/'
-              onChange={(e) => setEmail(e.target.value)}
+              pattern='^[^@]+@[^@]+\.[^@.]+$'
               required
               disabled
               autoComplete='on'
               // placeholder='Enter your email address'
+              onInput={handleInput}
+              onInvalid={handleInvalidEmail}
               className='mb-2 px-2 py-1 text-gray-800 rounded-sm'
               ></input>
           </div>
@@ -144,10 +154,10 @@ export default function QuoteForm() {
           </label>
           <textarea
             name='Message'
+            value={message}
             aria-label='Email comments text area'
             required
             disabled
-            value={message}
             placeholder='Email Form Coming Soon! - Click the text above or the "Email Us" button to open your mail app'
             onChange={(e) => setMessage(e.target.value.slice(0, 500))}
             className='h-[10rem] px-6 py-3 text-gray-800 rounded-sm resize-none'
@@ -166,8 +176,8 @@ export default function QuoteForm() {
         >
           <button
             type='submit'
-            disabled
             aria-label='Submit email button'
+            disabled
             className='flex justify-center items-center w-40 mt-3 py-2 bg-blue-700 text-white font-semibold leading-6 rounded-sm shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500'
           >
               Email Us &ensp;
