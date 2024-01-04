@@ -22,8 +22,8 @@ export default function Services() {
           >
             <Reveal 
               keyframes={fadeInFromLeft}
-              delay={400}
-              triggerOnce={false}
+              delay={200}
+              triggerOnce={true}
             >
               <Image 
                 src={service.img}
@@ -36,8 +36,8 @@ export default function Services() {
 
             <Reveal 
               keyframes={fadeInFromRight}
-              delay={400}
-              triggerOnce={false}
+              delay={200}
+              triggerOnce={true}
             >
               <div className='flex flex-col justify-center max-w-[31rem] lg:h-[21rem] lg:mx-10 text-white'>
                 <h3 className='px-2 pb-4 text-end lg:text-center'>
