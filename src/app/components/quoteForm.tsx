@@ -124,6 +124,7 @@ export default function QuoteForm() {
               aria-label='Enter your email address'
               type='email'
               value={email}
+              pattern='/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/'
               onChange={(e) => setEmail(e.target.value)}
               required
               disabled
@@ -165,6 +166,7 @@ export default function QuoteForm() {
         >
           <button
             type='submit'
+            disabled
             aria-label='Submit email button'
             className='flex justify-center items-center w-40 mt-3 py-2 bg-blue-700 text-white font-semibold leading-6 rounded-sm shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500'
           >
