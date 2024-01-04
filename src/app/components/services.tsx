@@ -1,4 +1,7 @@
+'use client'
 import Image from 'next/image'
+import { Reveal } from 'react-awesome-reveal'
+import { fadeInFromLeft, fadeInFromRight } from '@utils/keyframes'
 import content from '@data/content'
 
 
@@ -9,7 +12,7 @@ export default function Services() {
   return (
     <article className='flex flex-col items-center lg:w-full max-w-[75rem] px-4 py-10'>
       <ul
-        aria-label='A list of our services' 
+        aria-label='A list of our services'
         className='flex flex-col w-full px-2'
       >
         {services && services.map((service, index) => (
@@ -17,20 +20,34 @@ export default function Services() {
             key={index} 
             className={`lg:flex lg:${service.flexDirection} justify-between items-center py-14 border-b-[1px] border-gray-500 last:border-b-0`}
           >
-            <Image 
-              src={service.img}
-              alt={`We offer a ${service.title} option`}
-              width={456}
-              height={0}
-              className='mx-auto lg:mx-10 mb-6 lg:mb-0 rounded-tr-[40%] rounded-bl-[40%] shadow-serviceImg'
-            />
+            <Reveal 
+              keyframes={fadeInFromLeft}
+              delay={400}
+              triggerOnce={false}
+            >
+              <Image 
+                src={service.img}
+                alt={`We offer a ${service.title} option`}
+                width={456}
+                height={0}
+                className='mx-auto lg:mx-10 mb-6 lg:mb-0 rounded-tr-[40%] rounded-bl-[40%] shadow-serviceImg'
+              />
+            </Reveal>
 
-            <div className='flex-1 max-w-[31rem] lg:mx-10 text-white'>
-              <h3 className='px-2 pb-4 text-end lg:text-center'>
-                {service.title}
-              </h3>
-              <span>{service.desc}</span>
-            </div>
+            <Reveal 
+              keyframes={fadeInFromRight}
+              delay={400}
+              triggerOnce={false}
+            >
+              <div className='flex flex-col justify-center max-w-[31rem] lg:h-[21rem] lg:mx-10 text-white'>
+                <h3 className='px-2 pb-4 text-end lg:text-center'>
+                  {service.title}
+                </h3>
+                <span className='leading-6'>
+                  {service.desc}
+                </span>
+              </div>
+            </Reveal>
           </li>
         ))}
       </ul>
