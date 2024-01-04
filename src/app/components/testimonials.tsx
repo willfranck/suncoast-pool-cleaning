@@ -10,7 +10,6 @@ export default function Testimonials() {
 
 
   return (
-
     <article className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10 px-6 py-20'>
       <Reveal 
         keyframes={fadeInFromLeft}

@@ -22,7 +22,7 @@ export default function ImageSlider() {
   return (
     <article className='flex flex-col items-center w-full max-w-[80rem] px-6 py-20 overflow-hidden'>
       <div className='flex flex-col md:flex-row justify-between items-end w-full md:w-3/4 px-3'>
-        <h3 id='galleryTitle'>Photo Gallery</h3>
+        <h3 id='galleryTitle'>{content.slider.title}</h3>
         <p className='pb-1 text-center'>
           {content.slider.subtitle}
         </p>
@@ -32,7 +32,6 @@ export default function ImageSlider() {
       <div className='flex flex-col md:flex-row items-center md:items-start'>
         <div className='w-full max-w-[20rem] sm:max-w-[22.5rem] lg:max-w-[32rem] mt-6 md:mr-6 rounded-md overflow-hidden'>
           <Swiper
-            className='swiper-main'
             onSwiper={setSwiperMain}
             modules={[ EffectCreative, Thumbs, Autoplay ]}
             effect={'creative'}
@@ -57,6 +56,7 @@ export default function ImageSlider() {
               delay: 4000,
               disableOnInteraction: true,
             }}
+            className='swiper-main'
           >
             {sliderImages && sliderImages.map((image, index) => (
               <SwiperSlide 
@@ -76,7 +76,6 @@ export default function ImageSlider() {
 
         <div className='flex justify-center items-center max-w-[20rem] mt-6'>
           <Swiper
-            className='swiper-thumbs'
             onSwiper={setThumbsSwiper}
             modules={[ Grid ]}
             grid={{
@@ -85,6 +84,7 @@ export default function ImageSlider() {
             }}
             slidesPerView={3}
             spaceBetween={10}
+            className='swiper-thumbs'
           >
             {sliderImages && sliderImages.map((image, index) => (
               <SwiperSlide 

@@ -49,6 +49,7 @@ export default {
   },
 
   slider: {
+    title: "Photo Gallery",
     subtitle: "Dive into Our Pool Cleaning Journey",
     img: [
       '/spc_about_splash.webp',
