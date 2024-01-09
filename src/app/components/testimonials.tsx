@@ -13,10 +13,10 @@ export default function Testimonials() {
     <article className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10 px-6 py-20'>
       <Reveal 
         keyframes={fadeInFromLeft}
-        fraction={0.4}
+        fraction={0.7}
         cascade={true}
-        damping={0.2}
-        triggerOnce={true}
+        damping={0.1}
+        // triggerOnce={true}
       >
        {testimonials && testimonials.map((testimonial, index) => (
           <div

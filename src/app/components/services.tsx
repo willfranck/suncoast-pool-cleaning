@@ -23,7 +23,7 @@ export default function Services() {
             <Reveal 
               keyframes={fadeInFromLeft}
               delay={300}
-              fraction={0.4}
+              fraction={0.6}
               triggerOnce={true}
             >
               <Image 
@@ -38,7 +38,7 @@ export default function Services() {
             <Reveal 
               keyframes={fadeInFromRight}
               delay={300}
-              fraction={0.4}
+              fraction={0.6}
               triggerOnce={true}
             >
               <div className='flex flex-col justify-center max-w-[31rem] lg:h-[21rem] lg:mx-10 text-white'>
