@@ -16,7 +16,7 @@ export default function Testimonials() {
         fraction={0.7}
         cascade={true}
         damping={0.1}
-        // triggerOnce={true}
+        triggerOnce={true}
       >
        {testimonials && testimonials.map((testimonial, index) => (
           <div
